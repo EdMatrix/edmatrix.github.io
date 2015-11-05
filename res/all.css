@@ -1,0 +1,391 @@
+﻿/* Reset everything */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+{
+	display:block;
+}
+body
+{
+	line-height:1;
+}
+ol, ul
+{
+	list-style: none;
+}
+blockquote, q
+{
+	quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after
+{
+	content:'';
+	content:none;
+}
+
+/* Images */
+img
+{
+    border-style:none;
+}
+
+/* Links */
+a
+{
+	text-decoration:underline;
+	color:#2aabde;
+}
+a:hover
+{
+    color:#42a747;
+}
+a:visited
+{
+    color:#18577e;
+}
+
+/* Frame up the body */
+body
+{
+	margin:0;
+	color:#3a3a3a;
+	font-family:'Franklin Gothic', 'ITC Franklin Gothic', 'Arial', Helvetica, sans-serif;
+	font-size: 100%; /* For pages, we allow sensitivity to browser font size settings */
+	line-height:1.2;
+	background-color:#ededed;
+}
+/* All other font sizes should be relative to the base (e.g. 1.5em or 150%) */
+
+#header
+{
+	background-color: #C0C0C0;
+	border-bottom: 1px black outset;
+}
+
+/* Main content frame for pages */
+#main
+{
+    border-width:1px;
+    border-style:ridge;
+    border-radius:5px;
+    border-color:black;
+	background-color:white;
+    max-width:80em;
+    margin:5px auto;
+	padding:5px;
+}
+
+/* General text formatting */
+p
+{
+    margin-bottom: 1em;
+}
+ul
+{
+    list-style:disc;
+    margin-left:3em;
+    margin-bottom: 1em;
+}
+ol
+{
+    list-style:decimal;
+    margin-left:3em;
+    margin-bottom: 1em;
+}
+em, i
+{
+	font-style:italic;
+}
+strong, b 
+{
+    font-weight:bold;
+}
+blockquote
+{
+	margin-left:5em;
+    margin-bottom: 1em;
+}
+
+/* Page or document Title */
+.title
+{
+    text-align:center;
+    font-size: 1.6em;
+	font-weight:bold;
+	color:#04384e;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.subtitle
+{
+    font-weight:bold;
+	font-size: 1.2em;
+	color:#8A1538;
+}
+
+/* Headings */
+h1
+{
+	font-size:1.6em;
+	font-weight:bold;
+	color:#8A1538;
+	margin-top: 0.8em;
+	margin-bottom: 0.2em;
+}
+
+h2
+{
+	font-size:1.25em;
+	font-weight:bold;
+	color:#04384e;
+	margin-top: 0.5em;
+	margin-bottom: 0.2em;
+}
+
+h3
+{
+	font-size:1.1em;
+	font-weight:bold;
+	color:#63666A;
+}
+
+h4
+{
+	font-size:1.1em;
+	font-style:italic;
+	color:#63666A;
+}
+
+h5,
+h6
+{
+	font-size:1.1em;
+	color:#63666A;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 h:link,
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 h:visited
+{
+	color:inherit;
+	text-decoration:inherit;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h5 a:hover
+{
+	color:#00B5E2;
+	text-decoration:underline;
+}
+
+/* code blocks */
+code
+{
+	font: 0.9em "Lucida Console", Monaco, monospace;
+	color: black;
+	background-color: #E8E8E8;
+	padding: 0 3px 0 3px;
+}
+
+pre
+{
+	font: 0.9em "Lucida Console", Monaco, monospace;
+	color: black;
+	background-color: #E8E8E8;
+	padding: 8px;
+    border-width:1px;
+    border-style:ridge;
+    border-radius:5px;
+    border-color:black;
+    margin-bottom: 1em;
+}
+
+pre code {
+	font: inherit;
+	color: inherit;
+	background-color: inherit;
+	padding: 0;
+}
+
+/* Tables */
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1em 0;
+}
+
+table th
+{
+  font-weight: bold;
+}
+
+table th, table td
+{
+  border: 1px solid black;
+  padding: 6px 13px;
+}
+
+/* Layout Tables (have no borders, padding, or margins) */
+
+table.layout
+{
+	margin: 0;
+}
+
+table.layout th, table.layout td
+{
+	border: 0px none white;
+	padding: 0;	
+}
+
+/******************************************/
+/* Document Layout */
+
+/* Body background for documents (which may be printed or PDFed) */
+#body-doc {
+	color: black;
+	font-size: 11pt; /* For print, we specify an exact size */
+	background-color:white;
+}
+
+/* Main content frame for documents (which may be printed or PDFed) */
+#main-doc {
+    border: none;
+	background-color:white;
+    max-width:6.5in; /* Means 1" margins when printed on 8.5" x 11" paper */
+    margin:10px auto;
+}
+
+/******************************************/
+/* Top Navigation Menu */
+
+/* top-nav */
+.top-nav {
+	font-weight:normal;
+	margin-bottom:0.5em;
+}
+.top-nav a
+{
+    color:#5a5a5a;
+    text-decoration:none;
+}
+.top-nav a:hover
+{
+    color:#49a64b;
+}
+.top-nav .active a
+{
+    color:#0684ac;
+}
+
+/******************************************/
+/* Main Menu Bar */
+
+/* menu-bar */
+div.menu-bar-holder
+{
+    height:1.2em;
+    background-color:#3E3E3E;
+}
+.menu-bar
+{
+    list-style:none;
+	font-size:1em;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.menu-bar li
+{
+	float:left;
+    padding:0 10px;
+	border-right:1px solid #8f9192;
+    background-color:#3E3E3E;
+    line-height:1.2em;
+    height:1.2em;
+}
+.menu-bar a
+{
+	float:left;
+	text-align:center;
+	color:#f1f1f1;
+	padding:0 0 1px;
+    text-decoration:none;
+}
+.menu-bar a:hover,
+.menu-bar li:hover a
+{
+    color:#43aeda;
+}
+.menu-bar li:hover
+{
+    position:relative;
+}
+.menu-bar li:hover .drop
+{
+    display:block;
+}
+/* menu-bar drop */
+.menu-bar .drop
+{
+	display:none;
+	position:absolute;
+	top:1.2em;
+	left:0px;
+	width:20em;
+    background-color:#3E3E3E;
+	padding:0;
+}
+.menu-bar ul
+{
+    list-style:none;
+	text-transform:none;
+	width:auto;
+	padding:5px 5px 2px 15px;
+	line-height:normal;
+}
+.menu-bar ul li
+{
+	float:none;
+	border:none;
+	margin:0;
+	padding:3px 0;
+    line-height:normal;
+    height:auto;
+}
+.menu-bar ul a ,
+.menu-bar li:hover ul a
+{
+	float:none;
+	color:#f1f1f1;
+    text-decoration:none;
+}
+.menu-bar ul a:hover ,
+.menu-bar li:hover ul a:hover
+{
+    color:#43aeda;
+}

@@ -1,0 +1,17 @@
+timezone: America/Los_Angeles
+encoding: utf-8
+markdown: kramdown
+domain: www.edmatrix.org
+layout: default
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

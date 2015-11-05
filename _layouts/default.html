@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{ page.title | escape }}</title>
+{% include head.html %}
+</head>
+
+<body>
+
+<div id="main">
+	{% include header.html %}
+	<div id="content" style="min-height: 400px;">
+		{{ content }}
+	</div>
+	{% include footer.html %}
+</div>
+
+</body>
+
+</html>
