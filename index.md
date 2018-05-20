@@ -38,4 +38,3 @@ Here are the names behind the abbreviations and links to the corresponding websi
 
 ## Site Updates
 * 19 May 2018: Add CASE standard
-* 
