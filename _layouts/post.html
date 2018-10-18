@@ -7,17 +7,17 @@
 </head>
 
 <body>
-
-<div id="main">
-	{% include header.html %}
-	<div id="content" style="min-height: 400px;">
-		<div class="title">{{ page.title | escape }}</div>
-		<div>{{ page.date | date_to_string }}</div>
-        {{ content }}
-	</div>
-	{% include footer.html %}
-</div>
-
+    <main>
+        <div id="frame">
+            {% include header.html %}
+            <div id="content" style="min-height: 400px;">
+                <div class="title">{{ page.title | escape }}</div>
+                <div>{{ page.date | date_to_string }}</div>
+                {{ content }}
+            </div>
+            {% include footer.html %}
+        </div>
+    </main>
 </body>
 
 </html>

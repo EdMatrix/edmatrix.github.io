@@ -2,19 +2,21 @@
 <html>
 
 <head>
-<title>{{ page.title | escape }}</title>
+<title>{{ page.title }}</title>
 {% include head.html %}
 </head>
 
 <body>
 
-<div id="main">
-	{% include header.html %}
-	<div id="content" style="min-height: 400px;">
-		{{ content }}
-	</div>
-	{% include footer.html %}
-</div>
+    <div id="frame">
+        {% include header.html %}
+        <main>
+            <article>
+                {{ content }}
+            </article>
+        </main>
+        {% include footer.html %}
+    </div>
 
 </body>
 
