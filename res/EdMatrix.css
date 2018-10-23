@@ -186,7 +186,6 @@ div.siteblock {
 }
 .siteblock a:visited {
     color: inherit;
-    text-decoration: inherit;
 }
 
 /* ==== Main Menu ==== */
@@ -216,7 +215,6 @@ div.menu {
 }
 .menu li a:visited {
     color: inherit;
-    text-decoration: inherit;
 }
 
 /* ==== Footer ==== */
@@ -372,7 +370,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link,
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 h:visited {
     color: inherit;
-    text-decoration: inherit;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h5 a:hover, h6 a:hover {
