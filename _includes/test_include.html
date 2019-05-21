@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="../res/EdMatrix.css" />
+    <script>
+
+
+
+        function loadFragmentInToElement(fragment_url, element_id)
+        {
+            var xhttp = new XMLHttpRequest();
+            var element = document.getElementById(element_id);
+            element.innerHTML = '<p><em>Loading ...</em></p>';
+            xhttp.open("GET", fragment_url);
+            xhttp.onreadystatechange = function ()
+            {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    element.innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.send(null);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="frame">
+        <main>
+            <article>
+                <div id="tableSpace"></div>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        loadFragmentInToElement("DataStandardsTable.html", "tableSpace");
+    </script>
+
+</body>
+
+</html>
