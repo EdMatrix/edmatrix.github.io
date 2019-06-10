@@ -10,6 +10,8 @@ This matrix positions prominent Education Technology Standards on two dimensions
 
 Here is the detail behind the matrix:
 
+*A draft update of this table includes more than twice as many standrds. [Please see the work-in-progress here.](https://docs.google.com/spreadsheets/d/1H-AKDdCnXk_d50c2jX8Ag9Ry0pTrrLOcVF1WH6WD9kE/edit?usp=sharing)*
+
 {% include DataStandardsTable.html %}
 
 ## Other Resources
