@@ -17,3 +17,13 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "stds"
+    values:
+      layout: "standard"
+collections:
+  stds:
+    output: true
+    permalink: /stds/:path.html

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{ page.title | escape }}</title>
+{% include head.html %}
+</head>
+
+<body>
+    <main>
+        <div id="frame">
+            {% include header.html %}
+			<main>
+				<article>
+					<table class="layout">
+						<tr><td><b>Standard</b></td><td>{{ page.title | escape }}</td></tr>
+						<tr><td><b>Standards Org</b></td><td>{{ page.org | escape }}</td></tr>
+						<tr><td><b>Types</b></td><td>{{ page.types }}</td></tr>
+						<tr><td><b>Types</b></td><td>{{ page.datalayers }}</td></tr>
+						<tr><td><b>Types</b></td><td>{{ page.edlevels }}</td></tr>
+					</table>
+					<div>
+						{{ content }}
+					</div>
+				</article>
+			<main>
+            {% include footer.html %}
+        </div>
+    </main>
+</body>
+
+</html>

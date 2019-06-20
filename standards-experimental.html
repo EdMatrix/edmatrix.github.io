@@ -1,0 +1,29 @@
+---
+title: EdMatrix Experimental Standards Table
+date: 2019-06-20
+---
+<h1>{{ page.title }}</h1>
+<table>
+	<tr><th>Standard</th><th>Standards<br/>Org</th><th>Description</th><th style="min-width: 10em;">Types</th><th style="min-width: 8.5em;">Data Layers</th><th>Ed<br/>Levels</th></tr>
+	{%- for post in site.stds -%}
+	<tr>
+		<td>{{ post.title | escape }}</td>
+		<td>{{ post.org | escape }}</td>
+		<td>{{ post.content }}</td>
+		<td>{{ post.types }}</td>		
+		<td>
+		{%- assign layers = post.datalayers | split: "," -%}
+		{%- for layer in layers -%}
+			{%- unless forloop.first -%}<br/>{%- endunless -%}
+			{%- assign s = layer | strip -%}
+			{%- case s -%}
+				{%- when '1' -%}1. Data Dict
+				{%- when '2' -%}2. Data Model
+				{%- when '3' -%}3. Serialization
+				{%- when '4' -%}4. Protocol
+			{%- endcase -%}
+		{%- endfor -%}</td>
+		<td>{{ post.edlevels }}</td>
+	</tr>
+	{%- endfor -%}
+</table>
