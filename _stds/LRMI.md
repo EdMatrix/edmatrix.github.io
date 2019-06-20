@@ -1,5 +1,6 @@
 ---
 title: LRMI
+url: http://dublincore.org/specifications/lrmi
 org: Dublin Core
 types: Content Metadata
 datalayers: "1, 2"

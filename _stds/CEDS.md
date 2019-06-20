@@ -1,7 +1,8 @@
 ---
 title: CEDS
+url: http://ceds.ed.gov/
 org: US Ed
-types: Competency Data<br/>Student Data<br/>Educator Data</br>Content Data
+types: "Competency Data, Student Data, Educator Data, Content Data"
 datalayers: "1,2"
 edlevels: All
 ---

@@ -1,0 +1,19 @@
+---
+title: EdMatrix Experimental Standards JSON
+date: 2019-06-20
+layout: none
+---
+[
+{%- for post in site.stds -%}
+{%- unless forloop.first -%},
+{% endunless %}{
+	"name": "{{ post.title | replace: '"', '\\"' }}",
+	"url": "{{ post.url | replace: '"', '\\"' }}",
+	"org": "{{ post.org | replace: '"', '\\"' }}",
+	"description": "{{ post.content | strip | normalize_whitespace | replace: '"', "\\"" }}",
+	"types": "{{ post.types }}",
+	"datalayers": "{{ post.datalayers }}",
+	"edlevels": "{{ post.edlevels }}"
+}
+{%- endfor -%}
+]

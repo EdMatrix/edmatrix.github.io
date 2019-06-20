@@ -7,10 +7,16 @@ date: 2019-06-20
 	<tr><th>Standard</th><th>Standards<br/>Org</th><th>Description</th><th style="min-width: 10em;">Types</th><th style="min-width: 8.5em;">Data Layers</th><th>Ed<br/>Levels</th></tr>
 	{%- for post in site.stds -%}
 	<tr>
-		<td>{{ post.title | escape }}</td>
+		<td><a href="{{ post.url }}">{{ post.title | escape }}</a></td>
 		<td>{{ post.org | escape }}</td>
 		<td>{{ post.content }}</td>
-		<td>{{ post.types }}</td>		
+		<td>
+		{%- assign tps = post.types | split: "," -%}
+		{%- for type in tps -%}
+			{%- unless forloop.first -%}<br/>{%- endunless -%}
+			{{ type | strip }}
+		{%- endfor -%}
+		</td>		
 		<td>
 		{%- assign layers = post.datalayers | split: "," -%}
 		{%- for layer in layers -%}
