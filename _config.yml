@@ -5,6 +5,7 @@ domain: www.edmatrix.org
 layout: default
 exclude:
   - README.md
+  - Template.md
 defaults:
   -
     scope:

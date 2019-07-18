@@ -29,7 +29,13 @@ date: 2019-06-20
 				{%- when '4' -%}4. Protocol
 			{%- endcase -%}
 		{%- endfor -%}</td>
-		<td>{{ post.edlevels }}</td>
+		<td>
+		{%- assign tps = post.edlevels | split: "," -%}
+		{%- for level in tps -%}
+			{%- unless forloop.first -%}<br/>{%- endunless -%}
+			{{ level | strip }}
+		{%- endfor -%}
+		</td>
 	</tr>
 	{%- endfor -%}
 </table>
