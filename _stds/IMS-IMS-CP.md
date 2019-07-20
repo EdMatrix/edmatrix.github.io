@@ -4,7 +4,7 @@ url: https://www.imsglobal.org/content/packaging/index.html
 org: IMS Global
 types: "Content Packaging"
 datalayers: "2,3"
-edlevels: ""
+edlevels: "All"
 region:
 origin: EdMatrix 1.1
 ---

@@ -4,7 +4,7 @@ url: https://www.iste.org/standards
 org: ISTE
 types: "Competency & Achievement"
 datalayers: ""
-edlevels: ""
+edlevels: "All"
 region:
 origin: EdMatrix 1.1
 ---
