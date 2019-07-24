@@ -17,7 +17,7 @@ date: 2018-05-19
 	<tr>
 		<td><a href="{{ post.stdurl }}">{{ post.title | escape }}</a></td>
 		<td>{{ post.org | escape }}</td>
-		<td>{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>
+		<td class="streamline">{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>
 		<td>
 		{%- assign tps = post.types | split: "," -%}
 		{%- for type in tps -%}
@@ -47,8 +47,6 @@ date: 2018-05-19
 	</tr>
 	{%- endfor -%}
 </table>
-
-{% include DataStandardsTable.html %}
 
 <table class="layout"><tr>
 <td><a href="https://open-stand.org"><img alt="Open Stand Group Logo" height="128px" width="128px" src="res/open-stand512blue.png"></a></td>

@@ -437,3 +437,8 @@ table.layout th, table.layout td {
     border: 0 none white;
     padding: 0;
 }
+
+/* Streamlining is sometimes used in tables. */
+.streamline p {
+	display: inline;
+}
