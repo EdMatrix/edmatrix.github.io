@@ -1,6 +1,6 @@
 ---
 title: NGSS
-url: https://www.nextgenscience.org
+stdurl: https://www.nextgenscience.org
 org: Achieve
 types: "Competency & Achievement"
 datalayers: ""

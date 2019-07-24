@@ -1,6 +1,6 @@
 ---
 title: ISTE Standards
-url: https://www.iste.org/standards
+stdurl: https://www.iste.org/standards
 org: ISTE
 types: "Competency & Achievement"
 datalayers: ""

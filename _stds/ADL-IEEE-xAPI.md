@@ -1,6 +1,6 @@
 ---
 title: xAPI
-url: https://www.adlnet.gov/xapi
+stdurl: https://www.adlnet.gov/xapi
 org: ADL / IEEE
 types: "Student Data"
 datalayers: "4"

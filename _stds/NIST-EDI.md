@@ -1,6 +1,6 @@
 ---
 title: EDI
-url: https://en.wikipedia.org/wiki/Electronic_data_interchange
+stdurl: https://en.wikipedia.org/wiki/Electronic_data_interchange
 org: NIST
 types: "Foundational"
 datalayers: "4"

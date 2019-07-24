@@ -1,6 +1,6 @@
 ---
 title: FERPA
-url: https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html
+stdurl: https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html
 org: US Government
 types: "Design & Practice"
 datalayers: ""

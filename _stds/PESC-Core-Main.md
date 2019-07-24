@@ -1,6 +1,6 @@
 ---
 title: Core Main
-url: https://www.pesc.org/pesc-approved-standards.html
+stdurl: https://www.pesc.org/pesc-approved-standards.html
 org: PESC
 types: "Student Data, Educator Data, Institutional Data, Competency Data"
 datalayers: "1,2,3"

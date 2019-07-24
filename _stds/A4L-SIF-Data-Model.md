@@ -1,6 +1,6 @@
 ---
 title: SIF Data Model
-url: https://www.a4l.org/page/DataModel
+stdurl: https://www.a4l.org/page/DataModel
 org: A4L
 types: "Student Data,Educator Data,Institutional Data,Content Metadata"
 datalayers: "1,2,3"

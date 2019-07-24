@@ -1,6 +1,6 @@
 ---
 title: Enrollment API
-url: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+13+-+ENROLLMENT+API
+stdurl: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+13+-+ENROLLMENT+API
 org: Ed-Fi Alliance
 types: "Student Data, Educator Data, Institutional Data"
 datalayers: "3,4"

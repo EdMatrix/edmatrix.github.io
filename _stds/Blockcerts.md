@@ -1,6 +1,6 @@
 ---
 title: Blockcerts
-url: https://www.blockcerts.org/
+stdurl: https://www.blockcerts.org/
 org: Blockcerts
 types: "Student Data, Competency Data"
 datalayers: "3,4"

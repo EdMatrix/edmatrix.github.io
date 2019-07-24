@@ -1,6 +1,6 @@
 ---
 title: XML
-url: https://www.w3.org/XML/
+stdurl: https://www.w3.org/XML/
 org: W3C
 types: "Foundational"
 datalayers: "3"

@@ -1,6 +1,6 @@
 ---
 title: SCORM
-url: https://www.adlnet.gov/scorm/
+stdurl: https://www.adlnet.gov/scorm/
 org: ADL / IEEE
 types: "Content Packaging"
 datalayers: "2,3"

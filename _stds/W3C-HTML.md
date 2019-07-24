@@ -1,6 +1,6 @@
 ---
 title: HTML
-url: https://www.w3.org/html/
+stdurl: https://www.w3.org/html/
 org: W3C
 types: "Foundational"
 datalayers: "3"

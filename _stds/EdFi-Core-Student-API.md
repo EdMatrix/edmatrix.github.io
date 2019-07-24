@@ -1,6 +1,6 @@
 ---
 title: Core Student API
-url: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+16+-+CORE+STUDENT+DATA+API
+stdurl: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+16+-+CORE+STUDENT+DATA+API
 org: Ed-Fi Alliance
 types: ""
 datalayers: "3,4"

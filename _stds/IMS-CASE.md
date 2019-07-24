@@ -1,6 +1,6 @@
 ---
 title: CASE
-url: https://www.imsglobal.org/activity/case
+stdurl: https://www.imsglobal.org/activity/case
 org: IMS Global
 types: "Competency Data"
 datalayers: "1,2,3,4"

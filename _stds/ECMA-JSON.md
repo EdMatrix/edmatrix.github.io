@@ -1,6 +1,6 @@
 ---
 title: JSON
-url: https://ecma-international.org/publications/standards/Ecma-404.htm
+stdurl: https://ecma-international.org/publications/standards/Ecma-404.htm
 org: ECMA
 types: "Foundational"
 datalayers: "3"

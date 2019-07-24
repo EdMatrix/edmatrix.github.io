@@ -1,6 +1,6 @@
 ---
 title: EPUB
-url: http://idpf.org/edupub
+stdurl: http://idpf.org/edupub
 org: IDPF
 types: "Content Packaging"
 datalayers: "3"

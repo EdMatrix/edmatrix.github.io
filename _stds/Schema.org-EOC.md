@@ -1,6 +1,6 @@
 ---
 title: EOC
-url: https://schema.org/EducationalOccupationalCredential
+stdurl: https://schema.org/EducationalOccupationalCredential
 org: Schema.org
 types: "Student Data, Institutional Data"
 datalayers: "1,2"

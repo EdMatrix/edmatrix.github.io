@@ -1,6 +1,6 @@
 ---
 title: Caliper
-url: https://www.imsglobal.org/activity/caliper
+stdurl: https://www.imsglobal.org/activity/caliper
 org: IMS Global
 types: "Student Data"
 datalayers: "4"

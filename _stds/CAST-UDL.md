@@ -1,6 +1,6 @@
 ---
 title: UDL
-url: www.cast.org/our-work/about-udl.html
+stdurl: www.cast.org/our-work/about-udl.html
 org: CAST
 types: "Design & Practice"
 datalayers: ""

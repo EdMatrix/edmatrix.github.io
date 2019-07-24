@@ -1,6 +1,6 @@
 ---
 title: HTTP
-url: https://tools.ietf.org/html/rfc7230
+stdurl: https://tools.ietf.org/html/rfc7230
 org: IETF
 types: "Foundational"
 datalayers: "4"

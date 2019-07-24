@@ -1,6 +1,6 @@
 ---
 title: WCAG
-url: https://www.w3.org/WAI/standards-guidelines/wcag/
+stdurl: https://www.w3.org/WAI/standards-guidelines/wcag/
 org: W3C
 types: "Design & Practice"
 datalayers: ""

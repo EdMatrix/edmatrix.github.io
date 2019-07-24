@@ -1,6 +1,6 @@
 ---
 title: Data Standard
-url: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+17+-+DATA+STANDARD+v3.1a
+stdurl: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+17+-+DATA+STANDARD+v3.1a
 org: Ed-Fi Alliance
 types: "Student Data, Educator Data, Institutional Data"
 datalayers: "1,2,3"

@@ -1,6 +1,6 @@
 ---
 title: IMS CP
-url: https://www.imsglobal.org/content/packaging/index.html
+stdurl: https://www.imsglobal.org/content/packaging/index.html
 org: IMS Global
 types: "Content Packaging"
 datalayers: "2,3"

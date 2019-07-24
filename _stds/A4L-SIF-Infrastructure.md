@@ -1,6 +1,6 @@
 ---
 title: SIF Infrastructure
-url: https://www.a4l.org/page/Infrastructure
+stdurl: https://www.a4l.org/page/Infrastructure
 org: A4L
 types: "Student Data,Educator Data,Institutional Data,Content Metadata"
 datalayers: "4"

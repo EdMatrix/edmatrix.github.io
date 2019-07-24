@@ -1,6 +1,6 @@
 ---
 title: CTDL
-url: https://credentialengine.org/2018/10/03/credential-transparency-description-language-fact-sheet/
+stdurl: https://credentialengine.org/2018/10/03/credential-transparency-description-language-fact-sheet/
 org: Credential Engine
 types: "Content Metadata"
 datalayers: "1,2,3"

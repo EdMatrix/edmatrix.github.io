@@ -1,6 +1,6 @@
 ---
 title: CCSS
-url: http://www.corestandards.org/
+stdurl: http://www.corestandards.org/
 org: CCSSO/NGA
 types: "Competency & Achievement"
 datalayers: ""

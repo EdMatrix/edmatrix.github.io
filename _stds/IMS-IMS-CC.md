@@ -1,6 +1,6 @@
 ---
 title: IMS CC
-url: http://www.imsglobal.org/cc/
+stdurl: http://www.imsglobal.org/cc/
 org: IMS Global
 types: "Content Packaging"
 datalayers: "2,3"

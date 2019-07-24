@@ -1,6 +1,6 @@
 ---
 title: LTI
-url: http://www.imsglobal.org/activity/learning-tools-interoperability
+stdurl: http://www.imsglobal.org/activity/learning-tools-interoperability
 org: IMS Global
 types: "Content Integration"
 datalayers: "4"

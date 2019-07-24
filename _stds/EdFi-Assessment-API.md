@@ -1,6 +1,6 @@
 ---
 title: Assessment API
-url: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+15+-+ASSESSMENT+OUTCOMES+API
+stdurl: https://techdocs.ed-fi.org/display/EFDSRFC/ED-FI+RFC+15+-+ASSESSMENT+OUTCOMES+API
 org: Ed-Fi Alliance
 types: "Student Data, Content Metadata"
 datalayers: "3,4"

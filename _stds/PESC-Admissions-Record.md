@@ -1,6 +1,6 @@
 ---
 title: Admissions Record
-url: https://www.pesc.org/pesc-approved-standards.html
+stdurl: https://www.pesc.org/pesc-approved-standards.html
 org: PESC
 types: "Student Data, Institutional Data"
 datalayers: "1,2,3"

@@ -1,6 +1,6 @@
 ---
 title: Section 508
-url: https://www.section508.gov/
+stdurl: https://www.section508.gov/
 org: US Government
 types: "Design & Practice"
 datalayers: ""

@@ -1,6 +1,6 @@
 ---
 title: OneRoster
-url: https://www.imsglobal.org/activity/onerosterlis
+stdurl: https://www.imsglobal.org/activity/onerosterlis
 org: IMS Global
 types: "Student Data"
 datalayers: "3,4"

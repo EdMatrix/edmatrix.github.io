@@ -1,6 +1,6 @@
 ---
 title: QTI
-url: http://www.imsglobal.org/question/
+stdurl: http://www.imsglobal.org/question/
 org: IMS Global
 types: "Content Packaging"
 datalayers: "1,2,3"

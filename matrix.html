@@ -1,0 +1,63 @@
+---
+title: Education Standards Matrix
+date: 2018-05-19
+---
+<div style="width: 95%; max-width: 50em; margin: auto;">
+<img src="EdStandardsMatrix.png" alt="Education Standards Matrix Diagream" style="width: 100%;" />
+</div>
+
+<p>This matrix positions prominent Education Technology Standards on two dimensions. The horizontal dimension is the [Four Layer Framework for Data Standards](fourlayerframework.pdf). The vertical dimension is based on [A Taxonomy of Education Standards](taxonomyofstandards.pdf). Positioning standards according these dimensions can help education technology vendors and consumers identify the standards that are relevant to their work.
+</p>
+
+<h2>Standards Table</h2>
+
+<table>
+	<tr><th>Standard</th><th>Standards<br/>Org</th><th>Description</th><th style="min-width: 10em;">Types</th><th style="min-width: 8.5em;">Data Layers</th><th>Ed<br/>Levels</th></tr>
+	{%- for post in site.stds -%}
+	<tr>
+		<td><a href="{{ post.stdurl }}">{{ post.title | escape }}</a></td>
+		<td>{{ post.org | escape }}</td>
+		<td>{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>
+		<td>
+		{%- assign tps = post.types | split: "," -%}
+		{%- for type in tps -%}
+			{%- unless forloop.first -%}<br/>{%- endunless -%}
+			{{ type | strip }}
+		{%- endfor -%}
+		</td>		
+		<td>
+		{%- assign layers = post.datalayers | split: "," -%}
+		{%- for layer in layers -%}
+			{%- unless forloop.first -%}<br/>{%- endunless -%}
+			{%- assign s = layer | strip -%}
+			{%- case s -%}
+				{%- when '1' -%}1. Data Dict
+				{%- when '2' -%}2. Data Model
+				{%- when '3' -%}3. Serialization
+				{%- when '4' -%}4. Protocol
+			{%- endcase -%}
+		{%- endfor -%}</td>
+		<td>
+		{%- assign tps = post.edlevels | split: "," -%}
+		{%- for level in tps -%}
+			{%- unless forloop.first -%}<br/>{%- endunless -%}
+			{{ level | strip }}
+		{%- endfor -%}
+		</td>
+	</tr>
+	{%- endfor -%}
+</table>
+
+{% include DataStandardsTable.html %}
+
+<table class="layout"><tr>
+<td><a href="https://open-stand.org"><img alt="Open Stand Group Logo" height="128px" width="128px" src="res/open-stand512blue.png"></a></td>
+<td>The contributors to EdMatrix advocate for <a href="https://open-stand.org">open-stand.org</a> principles.</td>
+</tr></table>
+
+## Other Resources
+* [SETDA: Transforming Data to Information in Service of Learning](http://www.setda.org/wp-content/uploads/2013/11/Data-to-Information.pdf)
+* [OfThat: Data Standards in Service of Learning](http://www.ofthat.com/2013/06/data-standards-in-service-of-learning.html)
+
+## Site Updates
+* 20 May 2019: Full matrix and table update.
