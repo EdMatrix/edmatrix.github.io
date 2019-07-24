@@ -1,6 +1,6 @@
 ---
 title: AISS
-url: 
+stdurl: 
 org: IEEE LTSC
 types: ""
 datalayers: ""

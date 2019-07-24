@@ -1,6 +1,6 @@
 ---
 title: FML
-url: https://sagroups.ieee.org/3652-1/
+stdurl: https://sagroups.ieee.org/3652-1/
 org: IEEE LTSC
 types: ""
 datalayers: ""

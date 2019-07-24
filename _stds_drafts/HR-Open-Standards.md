@@ -1,6 +1,6 @@
 ---
 title: HR Open Standards
-url: https://hropenstandards.org/
+stdurl: https://hropenstandards.org/
 org: HR Open Standards
 types: ""
 datalayers: ""

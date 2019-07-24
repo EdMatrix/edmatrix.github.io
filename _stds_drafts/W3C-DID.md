@@ -1,6 +1,6 @@
 ---
 title: DID
-url: https://w3c-ccg.github.io/did-spec/
+stdurl: https://w3c-ccg.github.io/did-spec/
 org: W3C
 types: ""
 datalayers: ""

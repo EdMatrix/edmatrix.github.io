@@ -1,6 +1,6 @@
 ---
 title: SDPC
-url: https://privacy.a4l.org/
+stdurl: https://privacy.a4l.org/
 org: A4L
 types: ""
 datalayers: ""

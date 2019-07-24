@@ -1,6 +1,6 @@
 ---
 title: TMS
-url: https://www.w3.org/community/talent-signal/
+stdurl: https://www.w3.org/community/talent-signal/
 org: W3C
 types: ""
 datalayers: ""

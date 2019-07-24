@@ -1,6 +1,6 @@
 ---
 title: RCD
-url: https://standards.ieee.org/content/ieee-standards/en/standard/1484_20_1-2007.html
+stdurl: https://standards.ieee.org/content/ieee-standards/en/standard/1484_20_1-2007.html
 org: IEEE LTSC
 types: "Competency Data, Content Metadata"
 datalayers: "1,2,3"

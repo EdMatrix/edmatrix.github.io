@@ -1,6 +1,6 @@
 ---
 title: EduAPI
-url: https://www.imsglobal.org/edu-api
+stdurl: https://www.imsglobal.org/edu-api
 org: IMS Global
 types: ""
 datalayers: ""

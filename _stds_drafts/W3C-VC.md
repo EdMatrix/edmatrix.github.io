@@ -1,6 +1,6 @@
 ---
 title: VC
-url: https://w3c.github.io/vc-data-model/
+stdurl: https://w3c.github.io/vc-data-model/
 org: W3C
 types: ""
 datalayers: ""

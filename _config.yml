@@ -28,3 +28,6 @@ collections:
   stds:
     output: true
     permalink: /stds/:path.html
+  posts:
+    output: true
+    permalink: /news/:path.html

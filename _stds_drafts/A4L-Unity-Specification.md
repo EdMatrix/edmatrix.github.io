@@ -1,6 +1,6 @@
 ---
 title: Unity Specification
-url: https://www.a4l.org/page/Unity
+stdurl: https://www.a4l.org/page/Unity
 org: A4L
 types: "Student Data,Educator Data,Institutional Data,Content Metadata"
 datalayers: "1,2,3,4"

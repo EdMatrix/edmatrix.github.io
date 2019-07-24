@@ -1,6 +1,6 @@
 ---
 title: CSDG
-url: https://standards.ieee.org/project/7004.html
+stdurl: https://standards.ieee.org/project/7004.html
 org: IEEE LTSC
 types: ""
 datalayers: ""

@@ -1,6 +1,6 @@
 ---
 title: ARLEM
-url: http://arlem.kmi.open.ac.uk/
+stdurl: http://arlem.kmi.open.ac.uk/
 org: IEEE LTSC
 types: ""
 datalayers: ""

@@ -1,6 +1,6 @@
 ---
 title: EEA
-url: https://www.w3.org/community/exercises-and-activities/
+stdurl: https://www.w3.org/community/exercises-and-activities/
 org: W3C
 types: ""
 datalayers: ""

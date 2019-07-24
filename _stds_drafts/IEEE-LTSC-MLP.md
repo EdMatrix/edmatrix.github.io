@@ -1,6 +1,6 @@
 ---
 title: MLP
-url: 
+stdurl: 
 org: IEEE LTSC
 types: ""
 datalayers: ""

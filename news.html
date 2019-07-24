@@ -1,0 +1,23 @@
+---
+title: EdMatrix News
+date: 2018-07-24
+---
+<h1>{{ page.title }}</h1>
+
+<table class="layout" style="width: 100%; vertical-align:middle;">
+	<tr style="vertical-align:bottom;">
+		<td>
+			<h1>News
+			<a href="http://feeds.feedburner.com/edmatrix/news" rel="alternate" type="application/rss+xml">
+			<img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="feed" style="vertical-align: middle; border: 0"></a></h1>
+		</td>
+		<td style="text-align: center; width: 280px; vertical-align:middle;">
+			<form style="border:1px solid #ccc;padding:3px;text-align:center;line-height:1.5;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=edmatrix/news', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><b>Subscribe to EdMatrix News</b><br/>Email address: <input type="text" style="width:140px" name="email"/><br/><input type="hidden" value="edmatrix/news" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /></form>
+		</td>
+	</tr>
+</table>
+{% for post in site.posts %}
+	<hr/>
+	<a href="{{ post.url }}"><b>{{ post.date | date_to_string }}: {{ post.title | escape }}</b></a><br/>
+	{{ post.content }}<br/>
+{% endfor %}
