@@ -16,14 +16,14 @@
 						<tr><td><b>Standard</b></td><td><a href="{{ page.stdurl }}">{{ page.title | escape }}</a></td></tr>
 						<tr><td><b>Standards Org</b></td><td>{{ page.org | escape }}</td></tr>
 						<tr><td><b>Types</b></td><td>
-						{%- assign tps = post.types | split: "," -%}
+						{%- assign tps = page.types | split: "," -%}
 						{%- for type in tps -%}
 							{%- unless forloop.first -%}, {%- endunless -%}
 							{{ type | strip }}
 						{%- endfor -%}
 						</td></tr>
 						<tr><td><b>Data Layers</b></td><td>
-						{%- assign layers = post.datalayers | split: "," -%}
+						{%- assign layers = page.datalayers | split: "," -%}
 						{%- for layer in layers -%}
 							{%- unless forloop.first -%}<br/>{%- endunless -%}
 							{%- assign s = layer | strip -%}
@@ -36,13 +36,13 @@
 						{%- endfor -%}
 						</td></tr>
 						<tr><td><b>Ed Levels</b></td><td>
-						{%- assign tps = post.edlevels | split: "," -%}
+						{%- assign tps = page.edlevels | split: "," -%}
 						{%- for level in tps -%}
 							{%- unless forloop.first -%}, {%- endunless -%}
 							{{ level | strip }}
 						{%- endfor -%}
 						</td></tr>
-						<tr><td>Region</td><td>{{ page.region }}</td></tr>
+						<tr><td><b>Region</b></td><td>{{ page.region }}</td></tr>
 					</table>
 					<hr/>
 					<div>
