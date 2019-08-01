@@ -13,12 +13,38 @@
 			<main>
 				<article>
 					<table class="layout">
-						<tr><td><b>Standard</b></td><td>{{ page.title | escape }}</td></tr>
+						<tr><td><b>Standard</b></td><td><a href="{{ page.stdurl }}">{{ page.title | escape }}</a></td></tr>
 						<tr><td><b>Standards Org</b></td><td>{{ page.org | escape }}</td></tr>
-						<tr><td><b>Types</b></td><td>{{ page.types }}</td></tr>
-						<tr><td><b>Types</b></td><td>{{ page.datalayers }}</td></tr>
-						<tr><td><b>Types</b></td><td>{{ page.edlevels }}</td></tr>
+						<tr><td><b>Types</b></td><td>
+						{%- assign tps = post.types | split: "," -%}
+						{%- for type in tps -%}
+							{%- unless forloop.first -%}, {%- endunless -%}
+							{{ type | strip }}
+						{%- endfor -%}
+						</td></tr>
+						<tr><td><b>Data Layers</b></td><td>
+						{%- assign layers = post.datalayers | split: "," -%}
+						{%- for layer in layers -%}
+							{%- unless forloop.first -%}<br/>{%- endunless -%}
+							{%- assign s = layer | strip -%}
+							{%- case s -%}
+								{%- when '1' -%}1. Data Dict
+								{%- when '2' -%}2. Data Model
+								{%- when '3' -%}3. Serialization
+								{%- when '4' -%}4. Protocol
+							{%- endcase -%}
+						{%- endfor -%}
+						</td></tr>
+						<tr><td><b>Ed Levels</b></td><td>
+						{%- assign tps = post.edlevels | split: "," -%}
+						{%- for level in tps -%}
+							{%- unless forloop.first -%}, {%- endunless -%}
+							{{ level | strip }}
+						{%- endfor -%}
+						</td></tr>
+						<tr><td>Region</td><td>{{ page.region }}</td></tr>
 					</table>
+					<hr/>
 					<div>
 						{{ content }}
 					</div>

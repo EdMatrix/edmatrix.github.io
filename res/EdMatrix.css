@@ -435,7 +435,7 @@ table.layout {
 
 table.layout th, table.layout td {
     border: 0 none white;
-    padding: 0;
+    padding: 0 0.25em;
 }
 
 /* Streamlining is sometimes used in tables. */
