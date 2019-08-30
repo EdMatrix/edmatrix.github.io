@@ -1,8 +1,8 @@
 ---
-title: Submitting Updates
+title: Contributing Updates
 date: 2019-08-01
 ---
-# Submitting Updates to EdMatrix
+# Contributing Updates to EdMatrix
 
 EdMatrix would not be possible without the generous contributions from many people. We encourage individuals and organizations involved in education standards work to submit updates and corrections.
 

@@ -12,7 +12,7 @@
             {% include header.html %}
             <div id="content" style="min-height: 400px;">
                 <div class="title">{{ page.title | escape }}</div>
-                <div>{{ page.date | date_to_string }}</div>
+                <div><b>{{ page.date | date_to_string }}</b> by {{ page.author }}</div>
                 {{ content }}
             </div>
             {% include footer.html %}

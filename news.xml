@@ -1,25 +1,29 @@
 ---
-title: News RSS Feed
-layout:
+title: News Atom Feed
+layout: none
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
- <title>{{ site.title | xml_escape }}</title>
- <link href="http://{{ site.domain }}/atom.xml" rel="self"/>
- <link href="http://{{ site.domain }}/"/>
+ <title>EdMatrix News</title>
+ <link href="https://{{ site.domain }}/news.xml" rel="self"/>
+ <link href="https://{{ site.domain }}/news.html" rel="alternate"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://{{ site.domain }}/</id>
+ <id>https://{{ site.domain }}/</id>
  <author>
-   <name>SmarterApp</name>
+   <name>Brandt Redd</name>
+   <uri>https://brandtredd.org/</uri>
  </author>
+ <icon>https://{{ site.domain }}/res/EdMatrix/png</icon>
+ <rights>Copyright Brandt Redd. Offered under a Creative Commons Attribution 4.0 International License.</rights>
+ 
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
-   <link href="http://{{ site.domain }}{{ post.url }}"/>
+   <link href="https://{{ site.domain }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://{{ site.domain }}{{ post.id }}</id>
+   <id>https://{{ site.domain }}{{ post.url }}</id>
+   <author><name>{{ post.author | xml_escape }}</name></author>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

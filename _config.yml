@@ -1,6 +1,7 @@
 timezone: America/Los_Angeles
 encoding: utf-8
 markdown: kramdown
+title: EdMatrix
 domain: www.edmatrix.org
 layout: default
 exclude:
