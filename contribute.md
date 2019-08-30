@@ -94,11 +94,11 @@ The full name of the standard (often an expansion of the acronym) should appear 
 
 ## Step 3: Submit your update or addition.
 
-There are three ways to submit your update. If you are familiar with Git and with [GitHub](https://github.com/) (or are willing to learn) then use the Fork & Pull method. Otherwise, you can create an issue and attach your update. Both of these methods require that you create a free Github account.
+There are three ways to submit your update. If you are familiar with Git and with [GitHub](https://github.com/) (or are willing to learn) then use the Fork & Pull method. Otherwise, you can create an issue and attach your update. Both of these methods require that you create a [free Github account](https://github.com/join).
 
 ### Fork & Pull Method
 
-The Fork & Pull approach is the traditional way to submit an update to any GitHub project. First, you [create a personal fork](https://help.github.com/en/articles/about-forks) of the project. This is a copy of the project in which you can make any changes and try them out. Then you [submit a pull request](https://help.github.com/en/articles/about-pull-requests) recommending that the coordinator of the project incorporate your changes into the primary copy. The GitHub pull request mechanism includes a forum where you can describe your update and the coordinator can ask questions.
+The Fork & Pull approach is the standard way to submit an update to any GitHub project. First, you [create a personal fork](https://help.github.com/en/articles/about-forks) of the project. This is a copy of the project in which you can make any changes and try them out. Then you [submit a pull request](https://help.github.com/en/articles/about-pull-requests) recommending that the coordinator of the project incorporate your changes into the primary copy. The GitHub pull request mechanism initiates an online discussion where you can describe your update and the coordinator can ask questions.
 
 ### Create an Issue Method
 
@@ -106,5 +106,5 @@ Browse to the [EdMatrix Issues Page](https://github.com/edmatrix/edmatrix.github
 
 &nbsp;
 
-Thank you for your interest in EdMatrix. And thanks in advance for your contributions to making it a valuable resource for those working in education technology.
+Thank you for your interest in EdMatrix. And thanks in advance for your contributions to making it a valuable resource for everyone working in education technology.
 

@@ -126,7 +126,7 @@ body {
     display: table;
 }
 
-/* ==== Header including site title and main menu ==== */
+/* ==== Header including site title and nav menu ==== */
 
 header {
     margin-bottom: 0.5em;
@@ -190,30 +190,30 @@ div.siteblock {
 
 /* ==== Main Menu ==== */
 
-/* menu should be a div that frames up the main menu */
-div.menu {
+/* nav frames up the main menu which is typically a list of links */
+nav {
     float: right;
-    font-size: 1.2em;
+    font-size: 1.0em;
     margin-bottom: 0.2em;
 }
-.menu ul {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.menu li {
+nav li {
     color: var(--clr_accent1);
 }
-.menu li a {
+nav li a {
     color: inherit;
     text-decoration: inherit;
 }
-.menu li a:hover {
+nav li a:hover {
     background-color: var(--clr_link_hover_bg);
     color: inherit;
     text-decoration: inherit;
 }
-.menu li a:visited {
+nav li a:visited {
     color: inherit;
 }
 
