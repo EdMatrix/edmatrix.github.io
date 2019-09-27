@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,9 +11,10 @@
         <div id="frame">
             {% include header.html %}
 			<main>
-				<article>
+				<article style="min-height: 16em;">
 					<table class="layout">
 						<tr><td><b>Standard</b></td><td><a href="{{ page.stdurl }}">{{ page.title | escape }}</a></td></tr>
+						<tr><td><b>URL</b></td><td><a href="{{ page.stdurl }}">{{ page.stdurl | escape }}</a></td></tr>
 						<tr><td><b>Standards Org</b></td><td>{{ page.org | escape }}</td></tr>
 						<tr><td><b>Types</b></td><td>
 						{%- assign tps = page.types | split: "," -%}
