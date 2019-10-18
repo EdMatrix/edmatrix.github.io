@@ -1,7 +1,7 @@
 /* ==== Declare Constants ==== */
 :root {
-    --clr_accent1: #8A1515; /* Directory, Subtitle, Heading 1 (burgundy) */
-    --clr_accent2: #085170; /* Title, Heading 2 (dark turquoise)*/
+    --clr_accent1: #8B0333; /* Directory, Subtitle, Heading 1 (burgundy) */
+    --clr_accent2: #0B3C5D; /* Title, Heading 2 (dark Blue)*/
     --clr_link: #18577e; /* (blue) */
     --clr_link_visited: #278DCC;
     --clr_link_hover_bg: #D0D0D0; /* (medium-light gray) */
