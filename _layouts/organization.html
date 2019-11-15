@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{ page.title | escape }}</title>
+{% include head.html %}
+</head>
+
+<body>
+    <main>
+        <div id="frame">
+            {% include header.html %}
+			<main>
+				<article style="min-height: 16em;">
+					<table class="layout">
+						<tr><td><b>Organization</b></td><td><a href="{{ page.stdurl }}">{{ page.title | escape }}</a></td></tr>
+						<tr><td><b>URL</b></td><td><a href="{{ page.orgurl }}">{{ page.orgurl | escape }}</a></td></tr>
+						<tr><td><b>Region</b></td><td>{{ page.region }}</td></tr>
+					</table>
+					<hr/>
+					<div>
+						{{ content }}
+					</div>
+				</article>
+			</main>
+            {% include footer.html %}
+        </div>
+    </main>
+</body>
+
+</html>

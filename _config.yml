@@ -25,10 +25,19 @@ defaults:
       type: "stds"
     values:
       layout: "standard"
+  -
+    scope:
+      path: ""
+      type: "orgs"
+    values:
+      layout: "organization"
 collections:
   stds:
     output: true
     permalink: /stds/:path.html
+  orgs:
+    output: true
+    permalink: /orgs/:path.html
   posts:
     output: true
     permalink: /news/:path.html
