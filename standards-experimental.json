@@ -9,7 +9,8 @@ layout: none
 {% endunless %}{
 	"name": "{{ post.title | replace: '"', '\\"' }}",
 	"url": "{{ post.url | replace: '"', '\\"' }}",
-	"org": "{{ post.org | replace: '"', '\\"' }}",
+  "org": "{{ post.org | replace: '"', '\\"' }}",
+  "orgurl": "{{ post.org | slugify: "latin" }}"
 	"description": "{{ post.content | strip | normalize_whitespace | replace: '"', "\\"" }}",
 	"types": "{{ post.types }}",
 	"datalayers": "{{ post.datalayers }}",
