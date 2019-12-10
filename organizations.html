@@ -3,13 +3,13 @@ title: Education Standards Organizations
 date: 2019-01-15
 ---
 
-<p>The following table is a directory of Organizations that govern standards listed in the [Education Standards Matrix](/matrix.html)</p>
+<p>The following table is a directory of Organizations that govern standards listed in the <a href="/matrix.html">Education Standards Matrix</a>.</p>
 
 <h2>Standards Organizations</h2>
 
 <table>
 	<tr><th>Organization</th><th>Description</th></tr>
-	{%- for post in site.stds -%}
+	{%- for post in site.orgs -%}
 	<tr>
 		<td><a href="{{ post.orgurl }}">{{ post.title | escape }}</a></td>
 		<td class="streamline">{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>

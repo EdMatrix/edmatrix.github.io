@@ -1,6 +1,6 @@
 ---
 title: Title 
-stdurl: http://xxx
+stdurl: http://url
 org: Org Name
 types: "Student Data, Educator Data, Institutional Data, Competency Data, Content Metadata, Content Packaging & Integration, Foundational Standards, Competency & Achievement, Design & Practice"
 datalayers: "1,2,3,4"
