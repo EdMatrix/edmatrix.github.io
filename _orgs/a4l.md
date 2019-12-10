@@ -1,5 +1,5 @@
 ---
-title: Access 4 Learning Community (A4L)
+title: A4L
 orgurl: https://www.a4l.org/
 region:
 ---

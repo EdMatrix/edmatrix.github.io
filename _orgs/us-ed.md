@@ -1,5 +1,5 @@
 ---
-title: U.S. Department of Education
+title: US Ed
 orgurl: https://www.ed.gov/
 region:
 ---

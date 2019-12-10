@@ -1,5 +1,5 @@
 ---
-title: Title
+title: Template
 orgurl: https://url
 region:
 ---
