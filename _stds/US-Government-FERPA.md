@@ -1,7 +1,7 @@
 ---
 title: FERPA
 stdurl: https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html
-org: US Government
+org: U.S. Government
 types: "Design & Practice"
 datalayers: ""
 edlevels: "PK,Primary,Secondary,HigherEd"

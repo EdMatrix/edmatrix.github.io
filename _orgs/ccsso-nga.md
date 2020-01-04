@@ -1,5 +1,5 @@
 ---
-title: CCSSO
+title: CCSSO/NGA
 orgurl: https://ccsso.org/
 region: U.S.
 ---

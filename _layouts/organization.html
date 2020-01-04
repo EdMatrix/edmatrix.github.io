@@ -21,9 +21,8 @@
 					<div>
 						{{ content }}
 					</div>
-					<hr>
-					<h2>Standards</h2>
 
+					<h2>Standards</h2>
 					<table>
 						<tr><th>Standard</th><th>Description</th><th style="min-width: 10em;">Types</th><th style="min-width: 8.5em;">Data Layers</th><th>Ed<br/>Levels</th></tr>
 						{%- assign stdsfiltered = site.stds | where: "org",page.title -%}

@@ -1,7 +1,7 @@
 ---
 title: LOM
 stdurl: https://standards.ieee.org/standard/1484_12_1-2002.html
-org: IEEE-LTSC
+org: IEEE LTSC
 types: "Content Metadata"
 datalayers: "1,2,3"
 edlevels: "All"

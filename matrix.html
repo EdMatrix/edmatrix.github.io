@@ -19,7 +19,7 @@ date: 2018-07-24
 	{%- for post in site.stds -%}
 	<tr>
 		<td><a href="{{ post.stdurl }}">{{ post.title | escape }}</a></td>
-		<td><a href="/orgs/{{ post.org | slugify: "latin" }}.html">{{ post.org | escape }}</td>
+		<td><a href="/orgs/{{ post.org | slugify: "latin" }}.html">{{ post.org | escape }}</a></td>
 		<td class="streamline">{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>
 		<td>
 		{%- assign tps = post.types | split: "," -%}

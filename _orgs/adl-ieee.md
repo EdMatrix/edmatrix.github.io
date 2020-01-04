@@ -1,5 +1,5 @@
 ---
-title: ADL
+title: ADL/IEEE
 orgurl: https://www.adlnet.gov
 region: U.S.
 ---

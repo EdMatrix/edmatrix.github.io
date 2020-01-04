@@ -15,7 +15,7 @@
 					<table class="layout">
 						<tr><td><b>Standard</b></td><td><a href="{{ page.stdurl }}">{{ page.title | escape }}</a></td></tr>
 						<tr><td><b>URL</b></td><td><a href="{{ page.stdurl }}">{{ page.stdurl | escape }}</a></td></tr>
-						<tr><td><b>Standards Org</b></td><td>{{ page.org | escape }}</td></tr>
+						<tr><td><b>Standards Org</b></td><td><a href="/orgs/{{ page.org | slugify: "latin" }}.html">{{ page.org | escape }}</a></td></tr>
 						<tr><td><b>Types</b></td><td>
 						{%- assign tps = page.types | split: "," -%}
 						{%- for type in tps -%}

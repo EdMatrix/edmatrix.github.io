@@ -1,5 +1,5 @@
 ---
-title: Ed-Fi
+title: Ed-Fi Alliance
 orgurl: https://www.ed-fi.org/
 region:
 ---

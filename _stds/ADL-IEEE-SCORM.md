@@ -1,7 +1,7 @@
 ---
 title: SCORM
 stdurl: https://www.adlnet.gov/scorm/
-org: ADL / IEEE
+org: ADL/IEEE
 types: "Content Packaging"
 datalayers: "2,3"
 edlevels: "HigherEd,Workforce,Military"

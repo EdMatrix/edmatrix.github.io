@@ -1,7 +1,7 @@
 ---
 title: xAPI
 stdurl: https://www.adlnet.gov/xapi
-org: ADL / IEEE
+org: ADL/IEEE
 types: "Student Data"
 datalayers: "4"
 edlevels: "PK,Primary,Secondary,HigherEd,Workforce,Military"

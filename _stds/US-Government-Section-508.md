@@ -1,7 +1,7 @@
 ---
 title: Section 508
 stdurl: https://www.section508.gov/
-org: US Government
+org: U.S. Government
 types: "Design & Practice"
 datalayers: ""
 edlevels: "PK,Primary,Secondary,HigherEd,Workforce,Military"
