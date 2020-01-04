@@ -24,10 +24,9 @@
 					<hr>
 					<h2>Standards</h2>
 
-					<div>B</div>
 					<table>
 						<tr><th>Standard</th><th>Description</th><th style="min-width: 10em;">Types</th><th style="min-width: 8.5em;">Data Layers</th><th>Ed<br/>Levels</th></tr>
-						{%- assign stdsfiltered = site.stds | where: "org","DCMI" -%}
+						{%- assign stdsfiltered = site.stds | where: "org",page.title -%}
 						{%- for post in stdsfiltered -%}
 						<tr>
 							<td><a href="{{ post.stdurl }}">{{ post.title | escape }}</a></td>
