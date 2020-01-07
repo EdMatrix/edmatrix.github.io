@@ -1,5 +1,5 @@
 ---
-title: "Directory of Standards Organizations
+title: "Directory of Standards Organizations"
 author: "Brandt Redd"
 date: 2020-01-07
 ---
