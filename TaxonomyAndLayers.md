@@ -1,25 +1,25 @@
 ---
-title: EdMatrix, A Directory of Educational Standards
+title: EdMatrix, A Directory of Learning Standards
 author: Brandt Redd
-date: 2019-09-04
+date: 2020-01-07
 layout: article
 ---
-The [EdMatrix chart and table](/matrix.html) categorize education standards on two dimensions. Determining where standards are located on these dimensions helps understand which standards address similar needs and which are more complementary to each other.
+The [EdMatrix chart and table](/matrix.html) categorize learning standards on two dimensions. Determining where standards are located on these dimensions helps understand which standards address similar needs and which are more complementary to each other.
 
-* The vertical dimension of the matrix chart is "A Taxonomy of Educational Standards" that distinguishes between the *domains* or types of things each standard addresses.
+* The vertical dimension of the matrix chart is "A Taxonomy of Learning Standards" that distinguishes between the *domains* or types of things each standard addresses.
 * The horizontal dimension is "A Four-Layer Framework for Data Standards" indicating the data layers that are addressed by each standard.
 
-## A Taxonomy of Educational Standards
+## A Taxonomy of Learning Standards
 {: #taxonomy }
 
-<img style="float: right; margin: 1em;" src="Taxonomy.png" alt="A hierarchy of educational standards matching the descriptions in the text." width="450" />
-There are three broad categories of standards that are involved in educational efforts: Data Standards, Competency & Achievement Standards, and Design & Practice Standards. The EdMatrix focuses primarily on the Data Standards but recognizes the importance and interconnectedness of the other standards categories.
+<img style="float: right; margin: 1em;" src="Taxonomy.png" alt="A hierarchy of learning standards matching the descriptions in the text." width="450" />
+There are three broad categories of standards that are involved in learning efforts: Data Standards, Competency & Achievement Standards, and Design & Practice Standards. The EdMatrix focuses primarily on the Data Standards but recognizes the importance and interconnectedness of the other standards categories.
 
-**Data Standards** define the data elements and structures used to store and exchange educational information. For education, the three major domains of data standards are Organizational Data, Pedagogical Data and Foundational Standards. These three data domains are further divided into seven categories which are described later in this document.
+**Data Standards** define the data elements and structures used to store and exchange learning and educational information. For education, the three major domains of data standards are Organizational Data, Pedagogical Data and Foundational Standards. These three data domains are further divided into seven categories which are described later in this document.
 
 **Competency & Achievement Standards** describe "what [a] learner will know or be able to do." (Adapted from [IMS CASE](/stds/IMS-CASE.html)). Achievement Standards are competency statements that have been defined and adopted by an organization or a government entity. For example, the U.S. 50 states have each defined achievement standards for grades K through 12. Many of the states have adopted the [Common Core State Standards](/stds/CCSSO-NGA-CCSS.html) for English Language Arts and Mathematics.
 
-Competency frameworks appear all across academia and industry. In higher education, many universities define the *Learning Objectives* for each course of study. Professional associations like [IEEE](https://www.ieee.org/) and [ASCP](https://www.ascp.org) define the *Competency Standards* associated with their domain. Companies like Microsoft and CISCO define competencies required to be certified on their products.
+Competency frameworks appear all across academia and industry. In higher education, many universities define the *Learning Outcomes* for each course of study. Professional associations like [IEEE](https://www.ieee.org/) and [ASCP](https://www.ascp.org) define the *Competency Standards* associated with their domain. Companies like Microsoft and CISCO define competencies required to be certified on their products.
 
 **Design & Practice Standards** are the newest category in EdMatrix. These standards address human factors associated with learning experiences. For example [W3C WCAG](/stds/W3C-WCAG.html) standards address the accessibility of websites to those with disabilities. [Universal Design for Learning](/stds/CAST-UDL.html) focuses on known principles for optimizing teaching and learning. [FERPA](/stds/US-Government-FERPA.html) and [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) address student privacy.
 
