@@ -8,4 +8,4 @@ edlevels: "HigherEd, Workforce, Military"
 region: "Global"
 origin: Johmarx Patton/MedBiquitous
 ---
-**MedBiquitous Activity Report:** Activity Report allows organizations to electronically compile CE and Maintenance of Certification certificate data across providers, making it easier to track lifelong learning and improvement.
+**MedBiquitous Activity Report:** Activity Report allows organizations to electronically compile continuing education (CE) and Maintenance of Certification certificate data across providers, making it easier to track lifelong learning and improvement.
