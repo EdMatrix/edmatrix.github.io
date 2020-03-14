@@ -4,7 +4,7 @@ stdurl: http://frameworks.act.org
 org: ACT
 types: "Competency Data, Content Metadata, Competency & Achievement"
 datalayers: "1,2"
-edlevels: "PK, Primary, Secondary, HigherEd, Workforce"
+edlevels: "PK,Primary,Secondary,HigherEd,Workforce"
 region: "Global"
 origin: ACT Inc
 ---
@@ -12,7 +12,7 @@ origin: ACT Inc
 
 Learn more about the four, key domains that emphasize a broad range of skills and encourage a more expansivevision of the outcomes that help to define student success.
 
-*Core academic skills* that are mapped to learning progressions from K-career
-*Cross-cutting capabilities*, such as critical thinking, collaborative problem solving, and information and technology skills
-*Behavioral skills* related to success in education and the workforce
-*Education and career navigation skills* related to exploration, planning, and decision making
+* *Core academic skills* that are mapped to learning progressions from K-career
+* *Cross-cutting capabilities*, such as critical thinking, collaborative problem solving, and information and technology skills
+* *Behavioral skills* related to success in education and the workforce
+* *Education and career navigation skills* related to exploration, planning, and decision making
