@@ -8,6 +8,7 @@ exclude:
   - README.md
   - _stds/Template.md
   - _orgs/Template.md
+  - docker-compose.yml
 defaults:
   -
     scope:
