@@ -114,7 +114,7 @@ body {
     border-radius: 5px;
     border-color: black;
     background-color: white;
-    max-width: 65em;
+    max-width: 78em;
     margin: 5px auto;
     padding: 5px;
 }
@@ -441,4 +441,42 @@ table.layout th, table.layout td {
 /* Streamlining is sometimes used in tables. */
 .streamline p {
 	display: inline;
+}
+
+/* Standards Table */
+table.stds {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 1em 0;
+}
+
+table.stds th, table.stds td {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0.5em 0.25em;
+}
+
+table.stds th {
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 3px solid gray;
+}
+
+table.stds td {
+    border-bottom: 1px solid black;
+}
+
+table.stds ul {
+    margin-left: 1em;
+}
+
+table.stds ol {
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+.stdimg {
+    width: 6em;
+    vertical-align: top;
 }

@@ -1,0 +1,22 @@
+---
+title: Education Standards Organizations
+date: 2019-01-15
+---
+
+<h2>Directory of Standards Organizations</h2>
+
+<table>
+	<tr><th>Organization</th><th>Description</th></tr>
+	{%- for post in site.orgs2 -%}
+	<tr>
+		<td><a href="{{ post.orgurl }}">{{ post.title | escape }}</a></td>
+		<td class="streamline">{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>
+	</tr>
+	{%- endfor -%}
+</table>
+
+<table class="layout"><tr>
+<td><a href="https://open-stand.org"><img alt="Open Stand Group Logo" height="128px" width="128px" src="res/open-stand512blue.png"></a></td>
+<td>The contributors to EdMatrix advocate for <a href="https://open-stand.org">open-stand.org</a> principles.</td>
+</tr>
+</table>

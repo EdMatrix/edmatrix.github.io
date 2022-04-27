@@ -33,6 +33,18 @@ defaults:
       type: "orgs"
     values:
       layout: "organization"
+  -
+    scope:
+      path: ""
+      type: "stds2"
+    values:
+      layout: "standard"
+  -
+    scope:
+      path: ""
+      type: "orgs2"
+    values:
+      layout: "organization"
 collections:
   stds:
     output: true
@@ -40,6 +52,12 @@ collections:
   orgs:
     output: true
     permalink: /orgs/:path.html
+  stds2:
+    output: true
+    permalink: /v2/stds/:path.html
+  orgs2:
+    output: true
+    permalink: /v2/orgs/:path.html
   posts:
     output: true
     permalink: /news/:path.html
