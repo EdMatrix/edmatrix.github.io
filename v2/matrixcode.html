@@ -1,0 +1,214 @@
+---
+title: Learning Standards Matrix
+date: 2018-07-24
+---
+<div style="width: 95%; max-width: 40em; margin: auto;">
+<img src="EdMatrix.svg" alt="Learning Standards Matrix Diagram" style="width: 100%;" />
+</div>
+
+<div id="sampleSvg"></div>
+
+<!--
+<svg width="1841" height="1393"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
+    <path d="M 50 50 C 50 100 100 100 100 50 Z" stroke="#632523" stroke-width="5" stroke-linejoin="round" stroke-miterlimit="3" fill="#953735" fill-rule="evenodd" />
+    <path d="M912.5 381.835C912.5 330.288 954.288 288.5 1005.84 288.5L1523.16 288.5C1574.71 288.5 1616.5 330.288 1616.5 381.835L1616.5 755.164C1616.5 806.712 1574.71 848.5 1523.16 848.5L1005.84 848.5C954.288 848.5 912.5 806.712 912.5 755.164Z" stroke="#632523" stroke-width="26.6667" stroke-linejoin="round" stroke-miterlimit="10" fill="#953735" fill-rule="evenodd"/>
+</svg>
+-->
+
+<script>
+
+let standards =
+[{
+  "name": "SIF Data Model",
+  "url": "https://www.a4l.org/page/DataModel",
+  "org": "A4L",
+  "types": ["Organizational","Personal","Event","Achievement"],
+  "datalayers": [1,2,3],
+  "uses": "LRMI",
+  "context": "PK,Primary,Secondary",
+  "origin": "EdMatrix 1.0",
+  "description": "<p><strong>SIF Data Model:</strong> Data model for representing and transmitting educational information.</p>"
+},
+{
+  "name": "SIF Infrastructure",
+  "url": "https://www.a4l.org/page/Infrastructure",
+  "org": "A4L",
+  "types": ["Organizational","Personal","Event","Achievement"],
+  "datalayers": [4],
+  "uses": "XML, JSON, HTTP",
+  "context": "PK,Primary,Secondary,HigherEd",
+  "origin": "EdMatrix 1.0",
+  "description": "<p><strong>SIF Infrastructure:</strong> Protocol for transmitting educational information.</p>"
+},
+{
+  "name": "ePortfolio",
+  "url": "https://www.pesc.org/eportfolio.html",
+  "org": "PESC",
+  "types": ["Organizational","Personal","Event","Achievement","Credential"],
+  "datalayers": [1,2,3],
+  "uses": "XML,JSON",
+  "context": "HigherEd,Professional",
+  "origin": "Draft EdMatrix 2.0",
+  "description": "<p><strong>PESC Academic ePortfolio:</strong> A standard for transmitting a collection of artifacts giving evidence of student learning and achievement.</p>"
+},
+{
+  "name": "FERPA",
+  "url": "https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html",
+  "org": "U.S. Government",
+  "types": ["Personal"],
+  "datalayers": [1,2,3,4],
+  "uses": "",
+  "context": "PK,Primary,Secondary,HigherEd",
+  "origin": "EdMatrix 1.1",
+  "description": "<p><strong>Family Educational Rights and Privacy Act:</strong> A U.S. Federal law that protects the privacy of student education records.</p>"
+},
+{
+  "name": "CEDS",
+  "url": "http://ceds.ed.gov/",
+  "org": "US Ed",
+  "types": ["Organizational","Personal","Event","Achievement","Credential","Competency","Content Metadata"],
+  "datalayers": [1,2],
+  "uses": "",
+  "context": "All",
+  "origin": "EdMatrix 1.0",
+  "description": "<p><strong>Common Education Data Standards:</strong> Data Dictionary and Logical Data Model for representing educational data of all sorts.</p>"
+},
+{
+  "name": "WEIRD",
+  "url": "http://google.com",
+  "org": "Ringworld",
+  "types": ["Event","Competency","Achievement","Organizational"],
+  "datalayers": [4,1,2],
+  "uses": "",
+  "context": "All",
+  "origin": "Imagination",
+  "description": "<p><strong>WIERD:</strong> Sample standard with disjoint classifications.</p>"
+},
+];
+
+class svgDom {
+    static createEle(name, attrs, ...children) {
+        let ele = document.createElementNS("http://www.w3.org/2000/svg", name);
+        if (attrs !== undefined) {
+            for (let key in attrs) {
+                ele.setAttribute(key, attrs[key]);
+            }
+        }
+        for (let child of children) {
+            ele.appendChild(child);
+        }
+        return ele;
+    }
+}
+
+function toRanges(a) {
+    a.sort(function(x,y) {return x - y});
+    for (n of a) console.log(n);
+    let result = [];
+    let len = a.length;
+    for (let i=0; i<len; ++i) {
+        let f = a[i];
+        while (i<len-1 && a[i+1] == a[i]+1) ++i;
+        result.push({first: f, last: a[i]});
+    }
+    return result;
+}
+
+function typesToIndexes(types) {
+    let tts = [];
+    for (let t of types) {
+        switch(t) {
+            case "Organizational":
+                tts.push(0);
+                break;
+            case "Personal":
+                tts.push(1);
+                break;
+            case "Event":
+                tts.push(2);
+                break;
+            case "Achievement":
+                tts.push(3);
+                break;
+            case "Credential":
+                tts.push(4);
+                break;
+            case "Competency":
+                tts.push(5);
+                break;
+            case "Content Metadata":
+                tts.push(6);
+                break;
+            case "Content":
+                tts.push(7);
+                break;
+            // If not found, don't add anything to the array
+        }
+    }
+    return tts;
+}
+
+let xLeft = [0, 11, 21, 31, 41];
+let xRight = [0, 19, 29, 39, 49];
+let yTop = [11, 21, 31, 41, 51, 61, 71, 81];
+let yBottom = [19, 29, 39, 49, 59, 69, 79, 89];
+
+function rectToPath(rangeX, rangeY) {
+    const biasX = 15;
+    const intervalX = 14;
+    const marginX = 1;
+    const biasY = 10;
+    const intervalY = 12;
+    const marginY = 2;
+    const radius = 2
+    return "".concat(
+        "M", biasX+marginX+rangeX.first*intervalX, " ", biasY+marginY+radius+rangeY.first*intervalY,
+        "a", radius, " ", radius, " 0 0 0 ", radius, " ", -radius,
+        "h", intervalX*rangeX.last-radius*2-marginX*2,
+        "a", radius, " ", radius, " 0 0 0 ", radius, " ", radius,
+        "v", intervalY*rangeY.last-radius*2-marginY*2,
+        "a", radius, " ", radius, " 0 0 0 ", -radius, " ", radius,
+        "h", -(intervalX*rangeX.last-radius*2-marginX*2),
+        "a", radius, " ", radius, " 0 0 0 ", -radius, " ", -radius,
+        "z"
+    );
+}
+
+document.getElementById("sampleSvg").appendChild(
+    svgDom.createEle("svg", {width: 100, height: 100},
+        svgDom.createEle("rect", {x: 10, y: 10, width: 80, height: 80, fill: "blue"}),
+        svgDom.createEle("rect", {x: 20, y: 20, width: 60, height: 60, rx: 10, fill: "red", stroke: "black", "stroke-width": 5})
+    ));
+
+
+    for (let std of standards) {
+        document.write(std.name);
+        document.write("<br/>");
+        let tix = toRanges(typesToIndexes(std.types));
+        let lix = toRanges(std.datalayers);
+
+        document.write("&nbsp;Types: ");
+        for (let r of tix) {
+            document.write("[" + r.first + "," + r.last + "] ");
+        }
+        document.write("<br/>");
+
+        document.write("&nbsp;Layers: ");
+        for (let r of lix) {
+            document.write("[" + r.first + "," + r.last + "] ");
+        }
+        document.write("<br/>");
+
+    }
+
+
+</script>
+
+
+<table class="layout"><tr>
+<td><a href="https://open-stand.org"><img alt="Open Stand Group Logo" height="128px" width="128px" src="/res/open-stand512blue.png"></a></td>
+<td>The contributors to EdMatrix advocate for <a href="https://open-stand.org">open-stand.org</a> principles.</td>
+</tr>
+</table>
