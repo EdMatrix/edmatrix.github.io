@@ -7,6 +7,7 @@ date: 2018-07-24
 </div>
 
 <div id="sampleSvg"></div>
+<div id="standards"></div>
 
 <!--
 <svg width="1841" height="1393"
@@ -76,6 +77,17 @@ let standards =
   "description": "<p><strong>Common Education Data Standards:</strong> Data Dictionary and Logical Data Model for representing educational data of all sorts.</p>"
 },
 {
+  "name": "DUAL",
+  "url": "http://ofthat.com",
+  "org": "Phred",
+  "types": ["Organizational","Personal","Competency","Content Metadata"],
+  "datalayers": [1,2],
+  "uses": "",
+  "context": "All",
+  "origin": "EdMatrix 1.0",
+  "description": "<p><strong>Phred</strong> was here.</p>"
+},
+{
   "name": "WEIRD",
   "url": "http://google.com",
   "org": "Ringworld",
@@ -88,7 +100,7 @@ let standards =
 },
 ];
 
-class svgDom {
+class SvgDom {
     static createEle(name, attrs, ...children) {
         let ele = document.createElementNS("http://www.w3.org/2000/svg", name);
         if (attrs !== undefined) {
@@ -103,9 +115,26 @@ class svgDom {
     }
 }
 
+class Dom {
+    static createEle(name, attrs, ...children) {
+        let ele = document.createElement(name);
+        if (attrs !== undefined) {
+            for (let key in attrs) {
+                if (key === "textContent")
+                    ele.textContent = attrs[key];
+                else
+                    ele.setAttribute(key, attrs[key]);
+            }
+        }
+        for (let child of children) {
+            ele.appendChild(child);
+        }
+        return ele;
+    }
+}
+
 function toRanges(a) {
     a.sort(function(x,y) {return x - y});
-    for (n of a) console.log(n);
     let result = [];
     let len = a.length;
     for (let i=0; i<len; ++i) {
@@ -150,10 +179,12 @@ function typesToIndexes(types) {
     return tts;
 }
 
-let xLeft = [0, 11, 21, 31, 41];
-let xRight = [0, 19, 29, 39, 49];
-let yTop = [11, 21, 31, 41, 51, 61, 71, 81];
-let yBottom = [19, 29, 39, 49, 59, 69, 79, 89];
+const tmxWidth = 55;
+const tmxHeight = 105;
+const tmxLeftX = [0, 11, 21, 31, 41];
+const tmxRightX = [0, 19, 29, 39, 49];
+const tmxTopY = [11, 21, 31, 41, 51, 61, 71, 81, 91];
+const tmxBottomY = [19, 29, 39, 49, 59, 69, 79, 89, 99];
 
 function rectToPath(rangeX, rangeY) {
     const biasX = 15;
@@ -176,11 +207,39 @@ function rectToPath(rangeX, rangeY) {
     );
 }
 
+function getSvg(standard) {
+    let svgEle = SvgDom.createEle("svg", {width: tmxWidth, height: tmxHeight});
+    const tix = toRanges(typesToIndexes(standard.types));
+    const lix = toRanges(standard.datalayers);
+    for (let ti of tix) {
+        for (let li of lix) {
+            let xx = tmxLeftX[li.first];
+            let yy = tmxTopY[ti.first];
+            let xw = tmxRightX[li.last] - xx;
+            let yh = tmxBottomY[ti.last] - yy;
+            svgEle.appendChild(SvgDom.createEle("rect", {x: xx, y: yy, width: xw, height: yh, rx: 4, fill: "blue", stroke: "black", "stroke-width": 2}));
+        }
+    }
+    return svgEle;
+}
+
+function insertStandards() {
+    let stds = document.getElementById("standards");
+    for (let standard of standards) {
+        stds.appendChild(Dom.createEle("div", undefined,
+            getSvg(standard),
+            Dom.createEle("span", {textContent: standard.name})));
+    }
+}
+
+
 document.getElementById("sampleSvg").appendChild(
-    svgDom.createEle("svg", {width: 100, height: 100},
-        svgDom.createEle("rect", {x: 10, y: 10, width: 80, height: 80, fill: "blue"}),
-        svgDom.createEle("rect", {x: 20, y: 20, width: 60, height: 60, rx: 10, fill: "red", stroke: "black", "stroke-width": 5})
+    SvgDom.createEle("svg", {width: 100, height: 100},
+        SvgDom.createEle("rect", {x: 10, y: 10, width: 80, height: 80, fill: "blue"}),
+        SvgDom.createEle("rect", {x: 20, y: 20, width: 60, height: 60, rx: 10, fill: "red", stroke: "black", "stroke-width": 5})
     ));
+
+insertStandards();
 
 
     for (let std of standards) {
