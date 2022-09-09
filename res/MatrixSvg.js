@@ -136,7 +136,7 @@ static getMatrix(w, withText = false) {
 static getStandardMatrix(standard, w, withText = false) {
     let svgEle = MatrixSvg.getMatrix(w, withText);
     const tix = toRanges(typesToIndexes(standard.types));
-    const lix = toRanges(standard.datalayers);
+    const lix = toRanges(standard.dataLayers);
     for (let ti of tix) {
         for (let li of lix) {
             let xx = tmxBias + tmxInterval * li.first - tmPadding;

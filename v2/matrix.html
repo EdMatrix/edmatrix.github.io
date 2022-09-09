@@ -2,12 +2,11 @@
 title: Learning Standards Matrix
 date: 2018-07-24
 ---
-<div style="width: 95%; max-width: 40em; margin: auto;">
-<img src="EdMatrix.svg" alt="Learning Standards Matrix Diagram" style="width: 100%;" />
+<div id="mainMatrix" style="width: 95%; max-width: 40em; margin: auto;">
 </div>
 
 
-<table class="stds">
+<table id="stdTable" class="stds">
 	<tr>
 		<th>Matrix</th>
 		<th>Standard<br/>(Type)</th>
@@ -18,48 +17,6 @@ date: 2018-07-24
 		<th>Uses</th>
 		<th>Intended<br/>Context</th>
 	</tr>
-	{%- for post in site.stds2 -%}
-	<tr>
-		<td>
-			<img class="stdimg" src="/v2/matrices/{{post.url | split: "/" | last | split: "." | first}}.svg"/>
-		</td>
-		<td>
-			<a href="{{ post.stdurl }}">{{ post.title | escape }}</a><br/>
-			({{ post.stdtype | escape }})
-		</td>
-		<td><a href="/orgs/{{ post.org | slugify: "latin" }}.html">{{ post.org | escape }}</a></td>
-		<td class="streamline">{{ post.excerpt }} <a href="{{ post.url }}">(more)</a></td>
-		<td>
-			<ul>
-				{%- assign tps = post.types | split: "," -%}
-				{%- for type in tps -%}
-					<li>{{ type | strip }}</li>
-				{%- endfor -%}
-			</ul>
-		</td>		
-		<td>
-			{%- assign layers = post.datalayers | split: "," -%}
-			{%- for layer in layers -%}
-				{%- assign s = layer | strip -%}
-				{%- case s -%}
-					{%- when '1' -%}<ol start="1"><li>Data Dict</li></ol>
-					{%- when '2' -%}<ol start="2"><li>Data Model</li></ol>
-					{%- when '3' -%}<ol start="3"><li>Serialization</li></ol>
-					{%- when '4' -%}<ol start="4"><li>Protocol</li></ol>
-				{%- endcase -%}
-			{%- endfor -%}
-		</td>
-		<td>{{ post.uses | escape }}</td>
-		<td>
-			<ul>
-				{%- assign tps = post.context | split: "," -%}
-				{%- for level in tps -%}
-					<li>{{ level | strip }}</li>
-				{%- endfor -%}
-			</ul>
-		</td>
-	</tr>
-	{%- endfor -%}
 </table>
 
 <table class="layout"><tr>
@@ -67,3 +24,117 @@ date: 2018-07-24
 <td>The contributors to EdMatrix advocate for <a href="https://open-stand.org">open-stand.org</a> principles.</td>
 </tr>
 </table>
+
+<script type="module">
+    import moduleMatrixSvg from "/res/MatrixSvg.js";
+    globalThis.MatrixSvg = moduleMatrixSvg;
+</script>
+<script>
+
+// Note, this is a reduced version of what goes into standards.json - optimized for the page display.
+let standards = [
+{%- for post in site.stds2 -%}
+{%- unless forloop.first -%},
+{% endunless %}{
+  "name": "{{ post.title | replace: '"', '\\"' }}",
+  "url": "{{ post.stdurl | replace: '"', '\\"' }}",
+  "stdType": "{{ post.stdtype | replace: '"', '\\"' }}",
+  "org": "{{ post.org | replace: '"', '\\"' }}",
+  "orgPage": "/orgs/{{ post.org | slugify: "latin" }}",
+  "types": ["{{ post.types | replace: ',', '","' }}"],
+  "dataLayers": [{{ post.datalayers }}],
+  "uses": ["{{ post.uses | replace: ',', '","' }}"],
+  "context": ["{{ post.context | replace: ',', '","' }}"],
+  "excerpt": "{{ post.excerpt | strip | normalize_whitespace | replace: '"', '\"' }}"
+}
+{%- endfor -%}
+];
+
+function createEle(name, attrs, ...children) {
+	let ele = document.createElement(name);
+	if (attrs !== undefined) {
+		for (let key in attrs) {
+			ele.setAttribute(key, attrs[key]);
+		}
+	}
+	for (let child of children) {
+		if (typeof(child) == "string") {
+			ele.appendChild(document.createTextNode(child));
+		}
+		else {
+			ele.appendChild(child);
+		}
+	}
+	return ele;
+}
+
+const layerNames = ["", "Data Dict", "Data Model", "Serialization", "Protocol"];
+
+function stdToTr(std) {
+	return createEle("td", undefined, 
+		createEle("a", {href: std.stdurl}, std.name),
+		createEle("br", undefined),
+		("(" + std.stdType + ")"));
+}
+
+function descriptionToTd(std) {
+	const desc = document.createElement("td");
+	desc.innerHTML = std.excerpt;
+	return desc;
+}
+
+function dataTypesToTd(std) {
+	const ul = document.createElement("ul");
+	for (const t of std.types) {
+		ul.appendChild(createEle("li", undefined, t));
+	}
+	return createEle("td", undefined, ul);
+}
+
+function layersToTd(std) {
+	const list = document.createElement("td");
+	for (const l of std.dataLayers) {
+		list.appendChild(createEle("ol", {start: l}, createEle("li", undefined, layerNames[l])));
+	}
+	return list;
+}
+
+function usesToTd(std) {
+	return createEle("td", undefined, std.uses.join(", "));
+}
+
+function contextToTd(std) {
+	const ul = document.createElement("ul");
+	for (const t of std.context) {
+		ul.appendChild(createEle("li", undefined, t));
+	}
+	return createEle("td", undefined, ul);
+}
+
+function loadStandards() {
+	const stdTable = document.getElementById("stdTable");
+	for (std of standards) {
+		const stdMatrix = MatrixSvg.getStandardMatrix(std, "6em");
+		stdMatrix.style.verticalAlign = "top";
+		const row = document.createElement("tr");
+		row.appendChild(createEle("td", undefined, stdMatrix));
+		row.appendChild(stdToTr(std));
+		row.appendChild(createEle("td", undefined,
+			createEle("a", {href: std.orgPage}, std.org)));
+		row.appendChild(descriptionToTd(std));
+		row.appendChild(dataTypesToTd(std));
+		row.appendChild(layersToTd(std));
+		row.appendChild(usesToTd(std));
+		row.appendChild(contextToTd(std));
+		stdTable.appendChild(row);
+	}
+}
+
+function onLoaded() {
+    document.getElementById("mainMatrix").appendChild(MatrixSvg.getMatrix("100%", true));
+	loadStandards();
+}
+
+window.addEventListener('load', onLoaded);     
+
+</script>
