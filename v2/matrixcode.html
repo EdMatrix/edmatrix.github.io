@@ -6,18 +6,13 @@ date: 2018-07-24
 <img src="EdMatrix.svg" alt="Learning Standards Matrix Diagram" style="width: 100%;" />
 </div>
 
-<div id="sampleSvg"></div>
+<div id="sampleSvg" style="width: 95%; max-width: 40em; margin: auto;"></div>
 <div id="standards"></div>
 
-<!--
-<svg width="1841" height="1393"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" overflow="hidden">
-    <path d="M 50 50 C 50 100 100 100 100 50 Z" stroke="#632523" stroke-width="5" stroke-linejoin="round" stroke-miterlimit="3" fill="#953735" fill-rule="evenodd" />
-    <path d="M912.5 381.835C912.5 330.288 954.288 288.5 1005.84 288.5L1523.16 288.5C1574.71 288.5 1616.5 330.288 1616.5 381.835L1616.5 755.164C1616.5 806.712 1574.71 848.5 1523.16 848.5L1005.84 848.5C954.288 848.5 912.5 806.712 912.5 755.164Z" stroke="#632523" stroke-width="26.6667" stroke-linejoin="round" stroke-miterlimit="10" fill="#953735" fill-rule="evenodd"/>
-</svg>
--->
-
+<script type="module">
+    import moduleMatrixSvg from "/res/MatrixSvg.js";
+    globalThis.MatrixSvg = moduleMatrixSvg;
+</script>
 <script>
 
 let standards =
@@ -100,21 +95,6 @@ let standards =
 },
 ];
 
-class SvgDom {
-    static createEle(name, attrs, ...children) {
-        let ele = document.createElementNS("http://www.w3.org/2000/svg", name);
-        if (attrs !== undefined) {
-            for (let key in attrs) {
-                ele.setAttribute(key, attrs[key]);
-            }
-        }
-        for (let child of children) {
-            ele.appendChild(child);
-        }
-        return ele;
-    }
-}
-
 class Dom {
     static createEle(name, attrs, ...children) {
         let ele = document.createElement(name);
@@ -133,159 +113,24 @@ class Dom {
     }
 }
 
-function toRanges(a) {
-    a.sort(function(x,y) {return x - y});
-    let result = [];
-    let len = a.length;
-    for (let i=0; i<len; ++i) {
-        let f = a[i];
-        while (i<len-1 && a[i+1] == a[i]+1) ++i;
-        result.push({first: f, last: a[i]});
-    }
-    return result;
-}
-
-function typesToIndexes(types) {
-    let tts = [];
-    for (let t of types) {
-        switch(t) {
-            case "Organizational":
-                tts.push(0);
-                break;
-            case "Personal":
-                tts.push(1);
-                break;
-            case "Event":
-                tts.push(2);
-                break;
-            case "Achievement":
-                tts.push(3);
-                break;
-            case "Credential":
-                tts.push(4);
-                break;
-            case "Competency":
-                tts.push(5);
-                break;
-            case "Content Metadata":
-                tts.push(6);
-                break;
-            case "Content":
-                tts.push(7);
-                break;
-            // If not found, don't add anything to the array
-        }
-    }
-    return tts;
-}
-
-function rectToPath(rangeX, rangeY) {
-    const biasX = 15;
-    const intervalX = 14;
-    const marginX = 1;
-    const biasY = 10;
-    const intervalY = 12;
-    const marginY = 2;
-    const radius = 2
-    return "".concat(
-        "M", biasX+marginX+rangeX.first*intervalX, " ", biasY+marginY+radius+rangeY.first*intervalY,
-        "a", radius, " ", radius, " 0 0 0 ", radius, " ", -radius,
-        "h", intervalX*rangeX.last-radius*2-marginX*2,
-        "a", radius, " ", radius, " 0 0 0 ", radius, " ", radius,
-        "v", intervalY*rangeY.last-radius*2-marginY*2,
-        "a", radius, " ", radius, " 0 0 0 ", -radius, " ", radius,
-        "h", -(intervalX*rangeX.last-radius*2-marginX*2),
-        "a", radius, " ", radius, " 0 0 0 ", -radius, " ", -radius,
-        "z"
-    );
-}
-
-function getMatrixSvg(w,h) {
-    return SvgDom.createEle("svg", {width: w, height: h, viewBox: "0 0 1904 1440"},
-        //SvgDom.createEle("rect", {width: "100%", height: "100%", fill: "gray"}),
-        SvgDom.createEle("rect", {x: 288, y: 320, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 464, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 608, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 752, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 896, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 1040, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 1184, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 1328, width: 1600, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 128, y: 536, width: 384, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 16, y: 824, width: 528, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 128, y: 1112, width: 384, height: 64, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 128, y: 536, width: 80, height: 640, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 320, width: 80, height: 496, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 288, y: 896, width: 80, height: 496, fill: "#B0C6E1"}),
-        SvgDom.createEle("rect", {x: 960, y: 16, width: 160, height: 1408, fill: "#C0504D", "fill-opacity": 0.4}),
-        SvgDom.createEle("rect", {x: 1200, y: 16, width: 160, height: 1408, fill: "#C0504D", "fill-opacity": 0.4}),
-        SvgDom.createEle("rect", {x: 1440, y: 16, width: 160, height: 1408, fill: "#C0504D", "fill-opacity": 0.4}),
-        SvgDom.createEle("rect", {x: 1680, y: 16, width: 160, height: 1408, fill: "#C0504D", "fill-opacity": 0.4})
-    );
-}
-
-const tmxBias = 720;
-const tmxWidth = 160;
-const tmxInterval = 240;
-const tmyBias = 320;
-const tmyHeight = 64;
-const tmyInterval = 144;
-const tmPadding = 32;
-const tmRadius = tmPadding;
-const tmStrokeWidth = 8;
-
-function getSvg(standard, w, h) {
-    let svgEle = getMatrixSvg(w, h);
-    const tix = toRanges(typesToIndexes(standard.types));
-    const lix = toRanges(standard.datalayers);
-    for (let ti of tix) {
-        for (let li of lix) {
-            let xx = tmxBias + tmxInterval * li.first - tmPadding;
-            let yy = tmyBias + tmyInterval * ti.first - tmPadding;
-            let xw = (li.last-li.first) * tmxInterval + tmxWidth + tmPadding*2;
-            let yh = (ti.last-ti.first) * tmyInterval + tmyHeight + tmPadding*2;
-            svgEle.appendChild(SvgDom.createEle("rect", {x: xx, y: yy, width: xw, height: yh, rx: tmRadius, fill: "#953735", "fill-opacity": 0.6, stroke: "black", "stroke-width": tmStrokeWidth}));
-        }
-    }
-    return svgEle;
-}
-
 function insertStandards() {
     let stds = document.getElementById("standards");
     for (let standard of standards) {
         stds.appendChild(Dom.createEle("div", undefined,
-            getSvg(standard, 100, 100),
+            MatrixSvg.getStandardMatrix(standard, 100),
             Dom.createEle("span", {textContent: standard.name})));
     }
 }
 
+function onLoaded()
+{
+    document.getElementById("sampleSvg").appendChild(MatrixSvg.getMatrix(undefined, true));
 
-document.getElementById("sampleSvg").appendChild(getMatrixSvg(100,100));
+    insertStandards();
 
-insertStandards();
+}
 
-
-    for (let std of standards) {
-        document.write(std.name);
-        document.write("<br/>");
-        let tix = toRanges(typesToIndexes(std.types));
-        let lix = toRanges(std.datalayers);
-
-        document.write("&nbsp;Types: ");
-        for (let r of tix) {
-            document.write("[" + r.first + "," + r.last + "] ");
-        }
-        document.write("<br/>");
-
-        document.write("&nbsp;Layers: ");
-        for (let r of lix) {
-            document.write("[" + r.first + "," + r.last + "] ");
-        }
-        document.write("<br/>");
-
-    }
-
+window.addEventListener('load', onLoaded);     
 
 </script>
-
-
+</html>
