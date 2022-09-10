@@ -1,11 +1,12 @@
 ---
 title: SIF Infrastructure
 stdurl: https://www.a4l.org/page/Infrastructure
+stdtype: Tech
 org: A4L
-types: "Student Data,Educator Data,Institutional Data,Content Metadata"
+types: "Organizational,Personal,Event,Achievement"
 datalayers: "4"
-edlevels: "PK,Primary,Secondary,HigherEd"
-region:
-origin: EdMatrix 1.0
+uses: "XML, JSON, HTTP"
+context: "PK,Primary,Secondary,HigherEd"
+provenance: EdMatrix 1.0
 ---
 **SIF Infrastructure:** Protocol for transmitting educational information.
