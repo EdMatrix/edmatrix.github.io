@@ -4,7 +4,7 @@ date: 2019-08-01
 ---
 # About EdMatrix
 
-EdMatrix is a cooperative effort to create a directory of Education Standards. The emphasis is on Education Data standards but important Competency & Achievement standards and Design & Practice standards are also included.
+EdMatrix is a cooperative effort to create a directory of Learning Data Standards. The primary dimensions by which the standards are categorized are [A Taxonomy of Learning Data Standards](/Dimensions#taxonomy) (vertical) and [A Four-Layer Framework for Data Standards](/Dimensions#fourlayer) (horizontal). Please explore those descriptions to better interpret the table.
 
 Source to the site is [on GitHub here](https://github.com/EdMatrix/edmatrix.github.io).
 

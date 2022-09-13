@@ -12,6 +12,8 @@ The [EdMatrix chart and table](/matrix.html) categorize learning standards on tw
 ## A Taxonomy of Learning Standards
 {: #taxonomy }
 
+*As of September 2022 this description is out of date. The taxonomy has bee updated based on some excellent meetings organized by [Data Standards United](https://datastandardsunited.org/). This page will be updated shortly.*
+
 <img style="float: right; margin: 1em;" src="Taxonomy.png" alt="A hierarchy of learning standards matching the descriptions in the text." width="450" />
 There are three broad categories of standards that are involved in learning efforts: Data Standards, Competency & Achievement Standards, and Design & Practice Standards. The EdMatrix focuses primarily on the Data Standards but recognizes the importance and interconnectedness of the other standards categories.
 
@@ -54,7 +56,7 @@ The task of systems integration becomes easier and less expensive as more layers
 
 ## Synergies
 
-<img style="float: right; margin: 1em;" src="EdStandardsMatrix.png" alt="A hierarchy of educational standards matching the descriptions in the text." width="450" />
+<img style="float: right; margin: 1em;" src="EdMatrix.png" alt="A hierarchy of educational standards matching the descriptions in the text." width="450" />
 I have often said that personalized learning happens at the intersection of student data and content data. That is, when you can match the data we have about the student's achievement against the data we have about the learning materials available to that student. In a broader sense, the benefits of standards are greatly multiplied when complementary standards are used together.
 
 *This is an update to two previous documents, [A Four-Layer Framework for Data Standards](https://www.ofthat.com/2011/09/four-layer-framework-for-data-standards.html) and [A Taxonomy of Education Standards](https://www.ofthat.com/2013/03/a-taxonomy-of-education-standards.html). The two models were combined to produce EdMatrix.*
