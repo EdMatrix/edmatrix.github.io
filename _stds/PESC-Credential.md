@@ -1,11 +1,12 @@
 ---
-title: Common Credential
-stdurl: https://www.pesc.org/pesc-approved-standards.html
+title: Credential
+stdurl: https://www.pesc.org/credential-and-experiential-learning.html
+stdtype: Tech
 org: PESC
-types: "Student Data, Institutional Data, Competency Data"
+types: "Organizational,Personal,Event,Achievement,Credential"
 datalayers: "1,2,3"
-edlevels: "Secondary,HigherEd,Workforce"
-region:
-origin: Ed 3.0
+uses: "XML"
+context: "HigherEd,Workforce"
+provenance: Ed 3.0
 ---
-**PESC Common Credential for Certificates, Degrees and Diplomas:** An XML Data Standard to be used by any organization, college, university, school, district, state, province, and/or service provider to fully communicate degrees, certifications and other similar credentials obtained by the student.
+**PESC Credential and Experiential Learning:** An XML Data Standard to be used by any organization, college, university, school, district, state, province, and/or service provider to fully communicate degrees, certifications and other similar credentials obtained by the student.

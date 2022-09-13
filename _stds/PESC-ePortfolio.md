@@ -1,11 +1,12 @@
 ---
 title: ePortfolio
-stdurl: https://www.pesc.org/pesc-approved-standards.html
+stdurl: https://www.pesc.org/eportfolio.html
+stdtype: Tech
 org: PESC
-types: "Student Data"
+types: "Personal,Event,Achievement"
 datalayers: "1,2,3"
+uses: "XML"
 edlevels: "HigherEd"
-region:
-origin: Ed 3.0
+provenance: Ed 3.0
 ---
 **PESC ePortfolio:** The Academic ePortolio schema facilitates the transmission of eportfolio data from one eportfolio system to another.
