@@ -1,11 +1,12 @@
 ---
 title: Healthcare Professional Profile 
 stdurl: https://www.medbiq.org/professional_profile
+stdtype: Tech
 org: MedBiquitous
-types: "Student Data, Institutional Data"
+types: "Organizational,Personal"
 datalayers: "1,2,3"
-edlevels: "HigherEd, Workforce, Military"
-region: "Global"
-origin: Johmarx Patton/MedBiquitous
+uses:
+context: "HigherEd,Workforce,Military"
+provenance: Johmarx Patton/MedBiquitous
 ---
 **MedBiquitous Healthcare Professional Profile:** The Healthcare Professional Profile provides a standard format for profile data on healthcare professionals, making it easier to exchange and compile data across organizations.

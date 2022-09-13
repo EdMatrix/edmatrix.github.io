@@ -1,11 +1,11 @@
 ---
 title: Europass Learning Model 
 stdurl: https://github.com/european-commission-europass/EDCI-Data-Model
+stdtype: Tech
 org: European Commission
-types: "Student Data,Institutional Data,Competency Data"
+types: "Organizational,Personal,Event,Achievement,Competency"
 datalayers: "2,3"
-edlevels: "All"
-region: "Europe"
+Context: "Europe"
 ---
 **Europass Learning Model** captures the results of any non-formal and formal learning across Europe, as well as the validation of non-formal and informal learning. It is designed to provide a single format to describe certificates of attendance, examination results, degrees and diplomas, diploma supplements, professional certifications, employer recommendations and any other kind of claims that are related to learning.
 

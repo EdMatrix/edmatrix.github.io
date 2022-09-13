@@ -1,11 +1,12 @@
 ---
 title: IMS CP
 stdurl: https://www.imsglobal.org/content/packaging/index.html
+stdtype: Tech
 org: IMS Global
-types: "Content Packaging"
+types: "Content Metadata,Content"
 datalayers: "2,3"
-edlevels: "All"
-region:
-origin: EdMatrix 1.1
+uses: "XML,Zip"
+context: "Any"
+provenance: EdMatrix 1.1
 ---
 **IMS Content Packaging:** A format for packaging content and associated metadata for exchange between educational systems.

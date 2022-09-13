@@ -1,11 +1,12 @@
 ---
 title: OBI
 stdurl: https://www.imsglobal.org/sites/default/files/Badges/OBv2p0Final/index.html
+stdtype: Tech
 org: IMS Global
-types: "Student Data"
+types: "Achievement,Credential"
 datalayers: "3,4"
-edlevels: "Primary,Secondary,HigherEd,Workforce"
-region:
-origin: EdMatrix 1.0
+uses: "JSON-LD"
+context: "Primary,Secondary,HigherEd,Workforce"
+provenance: EdMatrix 1.0
 ---
 **Open Badge Infrastructure:** A format for communicating skills and achievements.
