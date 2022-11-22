@@ -71,9 +71,9 @@ function createEle(name, attrs, ...children) {
 
 const layerNames = ["", "Data Dict", "Data Model", "Serialization", "Protocol"];
 
-function stdToTr(std) {
+function stdToTd(std) {
 	return createEle("td", undefined, 
-		createEle("a", {href: std.stdurl}, std.name),
+		createEle("a", {href: std.url}, std.name),
 		createEle("br", undefined),
 		("(" + std.stdType + ")"));
 }
@@ -120,7 +120,7 @@ function loadStandards() {
 		stdMatrix.style.verticalAlign = "top";
 		const row = document.createElement("tr");
 		row.appendChild(createEle("td", undefined, stdMatrix));
-		row.appendChild(stdToTr(std));
+		row.appendChild(stdToTd(std));
 		row.appendChild(createEle("td", undefined,
 			createEle("a", {href: std.orgPage}, std.org)));
 		row.appendChild(descriptionToTd(std));

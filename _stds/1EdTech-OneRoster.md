@@ -2,7 +2,7 @@
 title: OneRoster
 stdurl: https://www.imsglobal.org/activity/onerosterlis
 stdtype: Tech
-org: IMS Global
+org: 1EdTech
 types: "Organizational,Personal"
 datalayers: "3,4"
 uses: "REST,CSV"

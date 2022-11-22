@@ -2,7 +2,7 @@
 title: CASE
 stdurl: https://www.imsglobal.org/activity/case
 stdtype: Tech
-org: IMS Global
+org: 1EdTech
 types: "Competency"
 datalayers: "1,2,3,4"
 uses: "JSON-LD"
