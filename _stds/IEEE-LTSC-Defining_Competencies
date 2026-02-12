@@ -1,0 +1,12 @@
+---
+title: IEEE Defining Competencies (IEEE 1484.20.2)
+stdurl: https://standards.ieee.org/ieee/1484.20.2/10743/
+stdtype: Practice
+org: IEEE
+types: "Competency"
+datalayers: 
+uses:
+context: "Any"
+provenance: IEEE
+---
+**IEEE Recommended Practice for Defining Competencies (IEEE 1484.20.2):** Recommended practices are given for defining the kinds of information that IEEE 1484.20.3-2023 encodes as interoperable data, i.e., data that defines a skill, knowledge, ability, attitude, habit of practice, behavior, or learning outcome.

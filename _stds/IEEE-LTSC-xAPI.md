@@ -1,12 +1,12 @@
 ---
-title: xAPI
-stdurl: https://www.adlnet.gov/xapi
+title: IEEE xAPI (IEEE 92741.1.1-2023)
+stdurl: https://opensource.ieee.org/xapi
 stdtype: Tech
-org: ADL/IEEE
+org: IEEE
 types: "Event"
 datalayers: "4"
 uses:
-context: "K-12,HigherEd,Workforce,Military"
-provenance: EdMatrix 1.0
+context: "Any"
+provenance: IEEE
 ---
 **Experience API:** A protocol for reporting and tracking learning activities and student experiences.
