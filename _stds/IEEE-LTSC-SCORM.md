@@ -2,7 +2,7 @@
 title: SCORM (IEEE 1484.11.1-2022)
 stdurl: https://standards.ieee.org/ieee/1484.11.1/10324/
 stdtype: Tech
-org: IEEE
+org: IEEE LTSC
 types: "Content"
 datalayers: "2,3"
 uses: "HTML,JavaScript"

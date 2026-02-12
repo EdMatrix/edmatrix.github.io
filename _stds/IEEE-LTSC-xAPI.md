@@ -2,7 +2,7 @@
 title: IEEE xAPI (IEEE 92741.1.1-2023)
 stdurl: https://opensource.ieee.org/xapi
 stdtype: Tech
-org: IEEE
+org: IEEE LTSC
 types: "Event"
 datalayers: "4"
 uses:
