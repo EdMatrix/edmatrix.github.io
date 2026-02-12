@@ -1,0 +1,12 @@
+---
+title: LMT IEEE 2881
+stdurl: https://opensource.ieee.org/lmt/lmt
+stdtype: Tech
+org: IEEE LTSC
+types: "Content Metadata"
+datalayers: "1,2"
+uses: "RDF,TTL,JSON-LD"
+context: "Any"
+provenance: IEEE
+---
+**IEEE Standard for Learning Metadata Terms (IEEE 2881):** New and existing metadata terms were contextualized around learning and bundled to address many common use cases of metadata, resulting in the formation of this standard. A series of classes and properties that intentionally align to a Resource Description Framework (RDF) type of model, which can be represented in many formats, including graphs, is described by this standard. It centers around different types of Learning Resources and Learning Events, distinguishing between the two as both were often previously categorized as Learning Objects. An extensible data model that focuses on the principles of sharing learning resources in a learning environment and describing learning events, sometimes “instances” of learning resources that learners may attend (virtually or in-person), is described by this standard.
